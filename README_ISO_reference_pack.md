@@ -1,19 +1,43 @@
-# ISO Reference Pack — App Design in Legal (SMU, Aug 2026)
+# ISO Reference Pack for AI Compliance
 
-Everything freely available on the ISO standards cited in the Module 4 deck
-*"Generative AI Applications Design and Prompt Engineering in Compliance and Legal"*.
+A free-to-read reference pack on the ISO/IEC standards most relevant to building and governing
+AI systems responsibly — AI risk management, AI management systems, AI system life cycle,
+data life cycle, and related standards.
 
-Downloaded 17 Aug 2026. 22 files, ~55,000 words of archived text plus 6 official ISO preview PDFs.
+---
+
+## How this pack is sourced, and why it's written the way it is
+
+Two rules shape every file in here:
+
+1. **No third-party content is reproduced wholesale.** Every file in `02_Practitioner_guides/`
+   is an **original summary written by On The Ground**, not a copy of the source article. Each
+   carries a citation header (title, author/organization, source URL, retrieval date) and a
+   `license_note` making clear the original article is © its author — go to `source_url` for
+   their full text. Where a source article contained unverifiable claims, invented statistics,
+   or (in one case) content that looked like AI-generated filler, that material was dropped
+   rather than repeated — see the individual files for notes on what was excluded and why.
+2. **The standards themselves are paywalled.** `01_ISO_sample_PDFs/` contains only the free
+   preview PDFs ISO/IEC publish themselves (typically the table of contents, scope, and opening
+   clauses). Nobody in this pack reproduces a full purchased standard.
+
+This pack's coverage was cross-checked against a private SMU/Straits Interactive training deck
+on AI application design, which is course material restricted to its participants and carries
+an explicit no-reproduction notice. **No text, slide content, or images from that deck appear
+anywhere in this repo.** The only thing derived from it is `03_SMU_Deck_ISO_Index.md`, a
+factual index of *which* standard numbers and generic template types the deck references —
+standard names aren't copyrightable expression, and no slide wording is quoted.
 
 ---
 
 ## What's in here
 
 ```
-Learning/
+iso-reference-for-ai-compliance/
 ├── README_ISO_reference_pack.md          ← this file
 ├── 01_ISO_sample_PDFs/                   ← official ISO preview PDFs (6)
-└── 02_Practitioner_guides/               ← archived explainers, markdown (16)
+├── 02_Practitioner_guides/               ← original OTG summaries of free third-party explainers, plus OTG's own research (18)
+└── 03_SMU_Deck_ISO_Index.md              ← factual cross-reference index (see note above)
 ```
 
 ### 01_ISO_sample_PDFs — the closest thing to the real text
@@ -31,16 +55,18 @@ scope, normative references, terms & definitions, and the opening of the main cl
 | `ISO-IEC-23894-2023_preview.pdf` | ISO/IEC 23894:2023 — AI risk management | 12 | Annex A / B / C structure |
 | `ISO-IEC-TR-5469-2024_preview.pdf` | ISO/IEC TR 5469:2024 — Functional safety and AI | 14 | Full TOC including Clauses 6–11 |
 
-### 02_Practitioner_guides — detailed free breakdowns
+### 02_Practitioner_guides — original OTG summaries of free third-party explainers
 
-Archived as markdown with the source URL at the top of each file.
+Each file opens with a structured citation header (title, source organization, source URL,
+retrieval date, license note) followed by an original-wording summary — not a copy of the
+source article. Files note where claims from the underlying source couldn't be verified.
 
 **ISO/IEC 42001 (AI management system)** — richest free ecosystem, because it's certifiable.
 
 | File | Why it's useful |
 |---|---|
-| `42001_Knowlee_38-controls-checklist.md` | All 38 AIMS controls, cross-mapped to the EU AI Act and ISO 27001, with the audit evidence each one needs |
-| `42001_Mindsetcyber_Annex-A-controls-list.md` | All 38 Annex A controls across the nine objectives; free checklist + Statement of Applicability template |
+| `42001_Knowlee_38-controls-checklist.md` | Checklist reorganized by theme, cross-mapped to the EU AI Act; flags that the source's specific Annex A sub-clause numbering doesn't match the published standard |
+| `42001_Mindsetcyber_Annex-A-controls-list.md` | All 38 Annex A controls across the nine objectives, cross-checked against the standard's actual structure |
 | `42001_Orbit-Reconn_controls-guide.md` | Each control group with auditor expectations |
 | `42001_Konfirmity_controls.md` | Same 38 controls, second interpretation — useful to triangulate |
 | `42001_AIGL_implementation-guide.md` | Clause-by-clause implementation roadmap |
@@ -86,52 +112,53 @@ Archived as markdown with the source URL at the top of each file.
 | `AGGREGATOR_AIStandardsHub.md` | Alan Turing Institute + BSI. Dedicated, regularly-updated page for nearly every standard here. Most authoritative free tracker |
 | `AGGREGATOR_VerifyWise_governance-library.md` | Clean explainers with cross-standard mapping |
 
+**Related standards and templates — OTG's own original research**
+
+Unlike the files above, these two aren't rewrites of a single third-party explainer — they're
+OTG-authored brief profiles compiled from multiple public sources, added after a cross-reference
+pass against the private training deck indexed in `03_SMU_Deck_ISO_Index.md` flagged gaps.
+
+| File | Why it's useful |
+|---|---|
+| `RELATED_STANDARDS_briefly.md` | Brief profiles of five standards the deck referenced that this pack didn't yet cover: ISO/IEC 38505-1/-2 (data governance accountability map), ISO 37301 (compliance management systems), ISO/IEC 27001 (information security), ISO/IEC 27701 (privacy information management), and ISO/IEC 29100 (privacy framework). Honest about which are AI-specific (none are) versus general standards AI governance programs commonly reuse. Also includes a separately-verified note on ISO/IEC TR 24030's use-case template (it follows the IEC 62559-2 methodology, itself paywalled — no freely public template beyond that could be confirmed) |
+| `TEMPLATE_model-cards.md` | Traces the "Model Card" AI documentation concept to Mitchell et al.'s 2019 paper (Google, freely available on arXiv) and confirms two genuinely free, actively maintained templates implementing it (Google's Model Card Toolkit, Hugging Face's model card format). Notes which AI standards touch on the same documentation/transparency concern (ISO/IEC 12792, and third-party commentary on ISO/IEC 42001 Clause 7.5) without overclaiming that any standard mandates the specific "model card" artifact by name |
+
 ---
 
 ## Two links could not be archived
 
 Both block automated retrieval. Open them in a browser:
 
-- **IEC blog, "Essential guidance for AI data lifecycle management"** (ISO/IEC 8183) — https://www.iec.ch/blog/essential-guidance-ai-data-lifecycle-management
+- **IEC blog, "Essential guidance for AI data lifecycle management"** (ISO/IEC 8183) — https://www.iec.ch/blog/essential-guidance-ai-data-lifecycle-management *(blocks automated retrieval; note that `8183_Nemko_10-stage-guide.md` cited this same URL for a quote OTG could not verify as genuine — treat with caution if you do access it directly)*
 - **Lexology, ISO/IEC 5339 overview** — https://www.lexology.com/library/detail.aspx?g=df187839-0df7-4e6b-8d05-f33fe81b61cd *(Lexology requires a free account)*
 
 `5339_CMSLaw_legal-update.md` and `8183_Nemko_10-stage-guide.md` cover the same ground.
 
 ---
 
-## Where each standard shows up in the SMU deck
+## Standards referenced in the cross-checked training deck
 
-| Standard | Deck slides | Role in the module |
-|---|---|---|
-| ISO/IEC 5338 | 12–20, 30–31, 44, 54, 99–100, 177–185, 192–210 | The spine of the whole module. All four sections map to its 8 life-cycle stages |
-| ISO/IEC 5339 | 11, 20, 37–38, 56, 147–150 | Stakeholder roles (AI Producer, Developer, Customer, User…) and the App Development Checklist |
-| ISO/IEC 8183 | 14, 20, 79, 193, 211 | Data life cycle — the 5-stage LLM build mapped onto 10 data stages |
-| ISO/IEC 23894 | 43, 144–146, 181 | Risk sources table used in the Section 2 learning outcomes |
-| ISO/IEC TR 24030 | 43, 56–61 | The AI Use Case Submission Template (the assessment deliverable) |
-| ISO/IEC TR 5469 | 102, 108–110, 114 | Functional safety, three-stage realization, acceptance checks |
-| ISO/IEC 42001 | 19, 61, 78, 90, 181, 204, 213 | AI governance / management system wrapper |
-| ISO/IEC 38505-1 & -2 | 92, 212–213 | Governance of data — the accountability map on slide 92 |
-| ISO 27001 / 27701 / 37301 / 29100 | 61, 79, 100, 115, 179–180 | Referenced in passing for security, privacy and compliance management |
+See `03_SMU_Deck_ISO_Index.md` for the full, properly-caveated factual index (standard numbers
+and neutral topic labels only — no slide text reproduced). It originally flagged five standards
+the deck referenced that this pack didn't yet cover in depth: ISO/IEC 38505-1/-2 (data
+governance accountability), ISO 37301 (compliance management), ISO/IEC 27001 (information
+security), ISO/IEC 27701 (privacy information management), and ISO/IEC 29100 (privacy
+framework). Brief, OTG-authored profiles of all five — plus a follow-up check on the deck's
+Model Card and ISO/IEC TR 24030 use-case-template mentions — now live in
+`RELATED_STANDARDS_briefly.md` and `TEMPLATE_model-cards.md` (see above).
 
 ---
 
 ## Caveat before this goes near a client deliverable
 
-The practitioner blogs — especially the certification-vendor ones — are **interpretations,
-not the standard text**. They're good for understanding structure and building a framework.
-For anything going into a client contract or audit deliverable, verify wording against a
-licensed copy.
+The practitioner summaries — especially the ones based on certification-vendor blogs — are
+**OTG's paraphrase of secondary interpretations, not the standard text**, and some underlying
+source articles had unverifiable or inaccurate claims OTG excluded during rewriting (see each
+file's citation header/notes). They're good for understanding structure and building a
+framework. For anything going into a client contract or audit deliverable, verify wording
+against a licensed copy of the actual standard.
 
-Prices as listed in the deck's glossary (slides 212–213):
-
-| Standard | Published | Price |
-|---|---|---|
-| ISO/IEC 5338 | 2023 | CHF 177 |
-| ISO/IEC 5339 | 2024 | CHF 155 |
-| ISO/IEC TR 24030 | 2024 | CHF 221 |
-| ISO/IEC 38505-1 | 2017 | CHF 132 |
-| ISO/IEC 38505-2 | 2018 | CHF 132 |
-| SS ISO/IEC 42001 | 2024 | SGD 63.40 (Singapore adoption — cheapest route to 42001) |
-
-The four worth buying for a repeatable offering: **5338, 8183, 23894, 42001**.
-Note the Singapore national adoption of 42001 at SGD 63.40 is far cheaper than the ISO original.
+For current pricing and purchase, check the standard's listing directly at
+[iso.org](https://www.iso.org/standards.html) or your national standards body (e.g. Singapore
+adopts several of these as free-to-view SS ISO/IEC standards, often cheaper than buying direct
+from ISO).

@@ -1,117 +1,48 @@
-> Source: https://sfi-norwai.github.io/regreview/iso/
-> Archived: 2026-08-17
-
+---
+title: "ISO/IEC standardization of AI"
+source_organization: "SFI NorwAI (Norwegian Centre for AI Innovation)"
+source_url: "https://sfi-norwai.github.io/regreview/iso/"
+retrieved: 2026-08-17
+content_type: "microsite"
+license_note: "Summary and analysis by On The Ground (OTG). Original article © source_organization. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
 
-# ISO/IEC standardization of AI
+## Context
 
-The [ISO/IEC JTC 1/SC 42](https://www.iso.org/committee/6794475.html) comittee is responsible for standardization within the area of Artificial Intelligence. There are 11 standards published and 37 standards under development under the direct responsibility of this technical committee.
-
-The major ISO/IEC standards related to AI are presented below.
+This page is one entry in a broader NorwAI regulatory-review microsite (copyright dated 2022) surveying standards work by ISO/IEC JTC 1/SC 42, the joint ISO/IEC committee responsible for AI standardization. At the time the page was written, SC 42 had 11 published standards and 37 more under development; some of the standards it lists (including ISO/IEC 23894 itself) were still in draft status (e.g., listed as a Committee Draft) at that point and have since been finalized — ISO/IEC 23894 was published in February 2023, for instance. Readers should treat draft/development statuses on this page as reflecting 2022 and check current status against the ISO/IEC JTC 1/SC 42 catalogue for anything time-sensitive. The page groups standards into five categories: foundational, trustworthiness, functional safety, governance implications, and other.
 
 ## Foundational standards
 
-### ISO/IEC 22989, Artificail Intelligence - Concepts and Terminology
+**ISO/IEC 22989 — AI Concepts and Terminology.** Establishes shared vocabulary and concepts for AI so the technology can be more consistently understood across a broad range of stakeholders, and so other standards (including 23894) have common terminology to build on.
 
-This document provides standardized concepts and terminology to help artificial intelligence technology be better understood and adopted by a broad set of stakeholders. This document can be used in the development of other standards and in support of communications among diverse, interested parties/stakeholders.
+**ISO/IEC 23053 — Framework for AI Systems Using Machine Learning.** Provides a common framework and terminology specifically for describing ML-based AI systems, covering ML systems, ML approaches, the ML pipeline, and the ML process, with an informative annex mapping its data types to the data categories in ISO/IEC 19944-1.
 
-### ISO/IEC 23053, Framework for Artificial Intelligence Systems Using Machine Learning
+## Trustworthiness
 
-This document aims to provide a framework for the description of AI systems that use ML. By establishing a common terminology and a common set of concepts for such systems, this document provides a basis for clear explanation of the systems and various considerations that apply to their engineering and to their use. The document describes machine learning systems (chapter 6), machine learning approaches (chapter 7), The machine learning pipeline (chapter 8) and the machine learning process (chapter 9). Annex A maps ISO/IEC 23053 data types to ISO/IEC 19944-1 data categories.
+**ISO/IEC TR 24368 — Overview of Ethical and Societal Concerns.** A high-level survey of ethical and societal issues in AI, from privacy and security to discriminatory outcomes and effects on human autonomy. It notes that the values built into an algorithm — and even the choice of what problems to apply AI to — can reflect developers' own worldviews and cognitive biases, whether intentionally or not, and that ethical concerns can arise even when a system is technically flawless. It surveys existing ethical frameworks and human-rights practices, with an informative annex summarizing ethical-AI principles from around the world and another elaborating on concerns in specific use cases.
 
-## Trustworthyness
+**ISO/IEC 23894 — Risk Management.** AI can introduce risks that are new to an organization, can have positive or negative effects on existing objectives, or can shift the likelihood of risks the organization already had. The standard gives organizations that develop, produce, deploy, or use AI-based products, systems, and services guidance on managing risk specific to AI, and is designed to be used together with — and treats as a normative reference — ISO 31000:2018. It mirrors ISO 31000's clause structure, amending it with AI-specific sub-clauses where needed; its main content sits in the principles clause, the framework clause, and the processes clause, with Annex A and Annex B providing common AI-related objectives and risk sources, and Annex C giving an example mapping between the risk management process and an AI system life cycle. (See the companion files in this repository for more detailed treatment of 23894.)
 
-### ISO/IEC PRF TR 24368, Information technology — Artificial intelligence — Overview of ethical and societal concerns
+**ISO/IEC TR 24027 — Bias in AI Systems and AI-Aided Decision Making.** Defines bias in an AI system as treating certain objects, people, or groups differently from others in tasks like perception, prediction, or decision-making. It distinguishes intended/desired bias from unintended/unwanted bias, and helps practitioners: understand where unwanted bias enters a system (human cognitive bias, data bias, and bias introduced through engineering choices); assess bias and fairness, including through fairness metrics applied to system outputs; and address bias-related risk across the full AI life cycle — data collection, training, continual learning, design, testing, evaluation, and use.
 
-This document provides a high-level overview of AI ethical and societal concerns. Examples of ethical and societal concerns in AI include privacy and security breaches to discriminatory outcomes and impact on human autonomy. The values embedded in algorithms, as well as the choice of problems AI systems and applications are used for to address, can be intentionally or inadvertently shaped by developers’ and stakeholders’ own worldviews and cognitive bias. Ethical and social concerns may arise even if an AI system performs flawlessly from a technical perspective.
+**ISO/IEC TR 24028 — Overview of Trustworthiness in AI.** Surveys approaches for establishing trust in AI systems, common engineering pitfalls and the threats/risks they create, mitigation techniques, and approaches for assessing and achieving availability, resilience, reliability, accuracy, safety, security, and privacy. It does not itself define or specify levels of trustworthiness.
 
-The document describes ethical frameworks, human rights practices, and principles for responsible use of AI. Appendix A is informative and gives an overview and summary of principles for ethical AI from around the world. Appendix B is informative and elaborates on ethical and societal concerns in several use cases.
-
-### ISO/IEC CD 23894 Information Technology – artificial Intelligence – risk management
-
-AI systems can introduce new or emergent risks for an organization, with positive or negative consequences on objectives, or changes in the likelihood of existing risks. This document provides guidelines on how organizations that develop, produce, deploy or use products, systems and services that utilize AI can manage risk specifically related to AI. It uses ISO 31000:2018 as a normative reference and is intended to be used in connection with ISO 31000:2018.
-
-The clause structure of ISO 31000:2018 is mirrored in this document and amended by sub-clauses if needed. The main parts in the document are Clause 5 (principles), clause 5 (framework) and clause 6 (processes). Common AI-related objectives and risk sources are provided in Annex A and Annex B. Annex C provides an example mapping between the risk management processes and an AI system life cycle.
-
-### ISO/IEC TR 24027:2021, Information technology — Artificial intelligence (AI) — Bias in AI systems and AI aided decision making
-
-Bias in an AI system can be described as performing some actions such as perception, observation, representation, prediction, or decision-making differently on certain objects, people, or groups compared to others.
-
-Bias can be categorized as desired/intended bias and unintended/unwanted. The document **ISO/IEC TR 24027 helps you**,
-
-1.  **understand from where the unintended bias is added to the AI systems:** potential sources of unwanted bias are human cognitive bias, data bias, and bias introduced by engineering decisions.
-
-2.  **assessing bias and fairness:** AI systems are complex and can be difficult to understand, but still, there exist strategies for the identification of unwanted bias. One way to uncover evidence of unwanted bias is to assess the system’s outputs using one or more fairness metrics. The document presents several of such matricesmetrics.
-
-3.  **treat bias-related vulnerabilities throughout the entire AI system lifecycle**, i.e., data collection, training, continual learning, design, testing, evaluation, and use.
-
-### ISO/IEC TR 24028:2020, Information technology – Artificial intelligence – Overview of trustworthiness in artificial intelligence
-
-ISO/IEC TR 24028 surveys topics related to trustworthiness in AI systems, including: \* Approaches to establish trust in AI systems. \* Engineering pitfalls and typical associated threats and risks to AI systems, along with possible mitigation techniques and methods. \* Approaches to assess and achieve availability, resiliency, reliability, accuracy, safety, security and privacy of AI systems. It does not specify levels of trustworthiness.
-
-### ISO/IEC TR 24029-1:2021, Artificial Intelligence (AI) — Assessment of the robustness of neural networks
-
-Neural Networks (NNs) are being widely used due to the promising results on various complex pattern learning tasks. Statistical analyses are used to measure the performance of NNs under varying conditions. Additionally, some form of formal analysis using formal methods and empirical analysis using empirical methods are also required to access the robustness of the NNs. In this regard, ISO/IEC TR 24029 is aimed at helping AI engineers and users to assess the robustness of NNs throughout their life cycle. More specifically, part 1 of the document helps understand the risks tied to the robustness of AI systems while part 2 focuses more on providing recommendations and requirements for the use of formal methods to assess the robustness.
-
-Overall, there are six steps in the assessment process. As the first step, *robustness goals are stated*. Generally, the goals are not only for the statistical analysis but also for the formal and empirical analysis. Then in the second and third steps, *testing is planned and conducted*. Once completed, the *outcomes are analyzed* in the fourth step, and the *results are interpreted* in the fifth step. *  
-Finally, in the last step,* the decision on the system robustness is formulated\* by comparing the interpreted results obtained in the fifth step and the robustness goals stated in the first step.
+**ISO/IEC TR 24029-1 — Assessment of the Robustness of Neural Networks.** Aimed at helping engineers and users assess how robust a neural network is across its life cycle, combining statistical analysis with formal and empirical methods. The assessment process runs in six broad steps: state the robustness goals, plan testing, conduct testing, analyze the outcomes, interpret the results, and finally decide on the system's robustness by comparing the interpreted results against the original goals. Part 1 focuses on understanding robustness-related risk; a further part addresses recommendations and requirements for using formal methods in the assessment.
 
 ## Functional safety
 
-### ISO/IEC AWI TR 5469, Artificial intelligence — Functional safety and AI systems
-
-*(This technical report is under development)*
-
-The purpose of ISO/IEC TR 5469 is to enable the developer of safety-related systems to appropriately apply AI technologies as part of safety functions by fostering awareness of the properties, safety risk (in the context of functional safety) factors, available methods and potential constraints of AI technologies. It does so by:
-
-- Giving an overview of functional safety and its relevance for AI.
-- Describing the use of AI technology in safety-related programmable systems.
-- Providing a classification scheme for the applicability of AI in safety-related programmable systems.
-- Explaining AI technology elements and the three-stage realization principle.
-- Explaining properties of AI systems and how they relate to safety in the context of functional safety.
-- Discussing verification and validation techniques.
-- Describing control and mitigation measures.
-- Showing how IEC 61508 3 can be interpreted for applying it to AI, and providing alternative ways for compliance when possible.
-- Mapping AI life cycle models to IEC 61508-1.
+**ISO/IEC TR 5469 — Functional Safety and AI Systems.** (Listed as under development on the source page; subsequently published.) This technical report is aimed at developers of safety-related systems who want to apply AI technology within safety functions responsibly. It works by: explaining functional safety and its relevance to AI; describing how AI technology is used in safety-related programmable systems; providing a classification scheme for where AI is applicable in such systems; explaining AI technology elements and a three-stage realization principle; explaining how AI system properties relate to functional safety; discussing verification and validation techniques; describing control and mitigation measures; showing how IEC 61508-3 can be interpreted for AI (with alternative compliance routes where a direct interpretation isn't practical); and mapping AI life-cycle models onto IEC 61508-1. In short, this is a functional-safety document (i.e., about safely applying AI within safety-critical systems), not a general AI quality or transparency standard — that latter ground is covered separately by standards such as ISO/IEC 25059 (AI quality model) and ISO/IEC 12792 (transparency taxonomy).
 
 ## Governance implications
 
-### ISO/IEC 38507:2022, Information technology — Governance of IT — Governance implications of the use of artificial intelligence by organizations
+**ISO/IEC 38507 — Governance Implications of the Use of AI by Organizations.** Guidance for an organization's governing body on the implications of using, or considering using, AI — defined broadly as developing or applying an AI system at any life-cycle stage to meet objectives and create value. A governing body weighing AI adoption needs to balance the opportunities against new risks and considerations that AI introduces, such as: greater reliance on technology; transparency and explainability gaps; differences between what's assumed when a task is delegated to a human versus to AI; competitive pressure from not adopting AI; the risk of embedding bias, errors, or harm into existing systems without realizing it; a mismatch in the pace of change between self-updating AI systems and human compliance oversight; workforce impact; and impact on commercial operations and brand reputation.
 
-The objective of this document is to provide guidance for the governing body of an organization that is using, or is considering the use of, artificial intelligence (AI). “Use of AI” is defined in the broadest sense as developing or applying an AI system through any part of its life cycle to fulfil objectives and create value for the organization.
+The standard is clear that the governing body itself remains responsible for AI use — responsibility isn't something that can be attributed to the AI system. Members of the governing body need to inform themselves about AI's possibilities and risks and remain accountable for what level of AI use the organization considers acceptable, since AI use can create new obligations, whether from law or from voluntary codes of practice the organization has adopted. It also outlines actions a governing body can take to constrain AI use where needed: tightening compliance oversight, narrowing the scope of use, assessing impact on stakeholders, clarifying legal obligations, aligning AI use with organizational objectives and culture, ensuring context is properly accounted for in problem-solving, and explicitly examining the additional risk AI introduces.
 
-A governing body can consider deploying AI in order to pursue specific opportunities that the organization has identified. In such cases, the governing body needs to weigh those opportunities against risk and other implications of use. New implications that arise from the use of AI could include: \* increased reliance on technology \* transparency and explainability issues \* differences in assumptions made when delegating tasks to humans vs AI \* competitive pressure of an organization not using AI \* unawareness of potential bias, errors or harms of embedding AI into existing complex systems \* disparity in speed of change between automated learning systems human controls of compliance; \* the impact of AI on the workforce \* the impact of AI on commercial operations and to brand reputation.
+## Other standards on the page
 
-The governing body should take responsibility for the use of AI, rather than attributing responsibility to the AI system itself. Members of the governing body are responsible for informing themselves about the possibilities and risks raised by using AI systems. Members of the governing body are accountable for the use of AI considered acceptable by the organization. The use of AI can result in new obligations for the organization. These can be legal requirements or as a consequence of the adoption of voluntary codes of practice, whether directly within an AI system’s automation of decision-making processes or indirectly through its use of data or other resources or processes.
+**ISO/IEC TR 24372 — Overview of Computational Approaches for AI Systems.** Describes typical characteristics of AI systems (e.g., adaptability, explainability, discriminative capability) and their computational characteristics (data-based, knowledge-based, infrastructure-based), covering two broad categories of approach — knowledge-driven and data-driven — and surveying algorithms and approaches spanning knowledge engineering and representation, logic and reasoning, machine learning, and metaheuristics.
 
-In section 5.5, the document describes actions that the organization may take to constrain the use of AI: - Increase oversight of compliance. - Address the scope of use. - Assess and address the impact on stakeholders. - Determine legal requirements or obligations of using such technology. - Align the use of AI to the objectives of the organization. - Align the use of AI to the organization’s culture and values. - Ensure that problem solving takes due account of context. - Examine the additional risk that the use of AI can bring to the organization.
+**ISO/IEC TR 24030 — Use Cases.** A collection of AI application use cases spanning domains such as agriculture, digital marketing, education, energy, financial markets, healthcare, robotics, ICT, legal, logistics, manufacturing, the public sector, security, and transportation. Its purpose is to illustrate where AI standardization work actually applies in practice, share collected use cases to support collaboration between standardization bodies and other organizations, and help surface new technical requirements that could accelerate AI technology development.
 
-## Other
-
-### ISO/IEC TR 24372:2021, Information technology — Artificial intelligence (AI) — Overview of computational approaches for AI systems
-
-ISO/IEC TR 24372 describes the typical characteristics of AI systems (e.g. adaptable, explainable, discriminative) and their computational characteristics (e.g. data-based, knowledge-base, infrastructure-based). It describes two categories of computational approaches: knowledge-driven and data-driven.
-
-It describes selected algorithms and approaches related to: knowledge engineering and representation, logic and reasoning, machine learning, and metaheuristics.
-
-### ISO/IEC TR 24030:2021, Information technology — Artificial intelligence (AI) — Use cases
-
-ISO/IEC TR 24030 provides a collection of use cases of artificial intelligence (AI) applications in a variety of domains, such as: agriculture, digital marketing, education, energy, financial markets, healthcare, robotics, ICT, legal, logistics, manufacturing, public sector, security, and transportation.
-
-It aims to illustrate the applicability of the AI standardization work across a variety of application domains, and share the collected use cases in support of AI standardization work with external organizations and internal entities to foster collaboration.
-
-It also intends to help identify new technical requirements that may accelerate the development of AI technology.
-
-### ISO/IEC TR 29119-11:2020, Software and systems engineering — Software testing — Part 11: Guidelines on the testing of AI-based systems
-
-The testing of traditional systems is well-understood, but AI-based systems, which are becoming more prevalent and critical to our daily lives, introduce new challenges. This document has been created to introduce AI-based systems and provide guidelines on how they might be tested. This document explains those characteristics which are specific to AI-based systems and explains the corresponding difficulties of specifying the acceptance criteria for such systems.
-
-This document presents the challenges of testing AI-based systems, the main challenge being the test oracle problem, whereby testers find it difficult to determine expected results for testing and therefore whether tests have passed or failed. It covers testing of these systems across the life cycle and gives guidelines on how AI-based systems in general can be tested using black-box approaches and introduces white-box testing specifically for neural networks. It describes options for the test environments and test scenarios used for testing AI-based systems.
-
-
- Previous  New Zealand
-
- Next  IEEE
-
-
-Copyright © NorwAI 2022
+**ISO/IEC TR 29119-11 — Guidelines on the Testing of AI-Based Systems.** While testing conventional software is well understood, AI-based systems introduce new testing challenges that this document addresses directly, explaining what makes AI systems different to test and the resulting difficulty in specifying acceptance criteria. Its central concern is the "test oracle problem" — the difficulty of determining the expected/correct result for a given test case, and therefore whether a test has actually passed or failed. It covers testing across the AI system life cycle, offers guidance on black-box testing approaches generally, introduces white-box testing specifically for neural networks, and describes options for test environments and test scenarios.

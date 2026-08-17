@@ -1,189 +1,32 @@
-> Source: https://verifywise.ai/ai-governance-library/
-> Archived: 2026-08-17
-
+---
+title: "AI Governance Library"
+source_organization: "VerifyWise"
+source_url: "https://verifywise.ai/ai-governance-library/"
+retrieved: 2026-08-17
+content_type: "aggregator/directory"
+license_note: "Summary and analysis by On The Ground (OTG). Original site © VerifyWise. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
 
-A curated collection of AI governance resources including regulations, standards, frameworks, and tools. Find trusted guidance for building responsible AI systems.
+# VerifyWise's AI Governance Library
 
-543 resources24 categories
+VerifyWise, a vendor of an AI governance software platform, maintains a public directory of AI governance reference material — regulations, standards, frameworks, and tools — described on the site as covering 543 resources across 24 categories at the time of retrieval (2026-08-17). A separate, smaller companion directory on the same site focuses specifically on agentic AI (roughly 121 resources across 8 categories).
 
-Governing AI agents? See the Agentic AI library
+## Category structure
 
-Dedicated collection of 121 resources across 8 categories covering agent risks, governance frameworks, regulation, evaluation, and vendor guidance.
+The library organises resources into categories including: regulations and laws; standards and certifications; governance frameworks; internal policy and governance; risk taxonomies; assessment and evaluation methods; transparency and documentation; incident and accountability practices; organisational roles and processes; sector-specific governance; international initiatives; ethics and principles; tooling and implementation; academic and research references; datasets and benchmarks; and open-source governance projects.
 
-Open library →
+## Examples of listed resources
 
-## Categories
+The featured and recently added entries captured at retrieval time included:
 
-All resources (543)Regulations and laws (38)Standards and certifications (30)Governance frameworks (31)Policies and internal governance (24)Risk taxonomies (23)Assessment and evaluation (25)Transparency and documentation (20)Incident and accountability (19)Organizational roles and processes (20)Sector specific governance (26)International initiatives (26)Ethics and principles (19)Tooling and implementation (20)Research and academic references (22)Datasets and benchmarks (18)Open source governance projects (24)Foundations (21)Enterprise adoption (15)Risks and challenges (18)Security and safeguards (15)Governance frameworks (23)Regulation (22)Evaluation and benchmarks (20)Vendor guidance (24)
+- **EU AI Act (official text)** — described as the first comprehensive AI-specific legal framework, using a risk-tiered approach (prohibited, high-risk, limited-risk, minimal-risk) with obligations for high-risk systems around risk management, data governance, transparency, and human oversight.
+- **OECD AI Principles** — a explainer of the five principles agreed in 2019 and adopted by 46-plus countries, with notes on how they relate to the EU AI Act and ISO/IEC 42001.
+- **California SB 243 (Companion AI Guardrails Act)** — signed into law in October 2025 and effective January 2026, it requires operators of companion-style AI chatbots to disclose that a user is interacting with AI, restrict sexually explicit content for minors, provide crisis resources for self-harm-related conversations, and report annually to a state suicide-prevention office; it also creates a private right of action for people harmed by non-compliance.
+- **OpenAI's agentic-AI safety practices** — a set of seven practices for operating autonomous AI agents safely (assigning accountability, logging actions, requiring human approval at key points, bounding what an agent can do, rolling out capabilities in stages, designing for reversibility, and building in shutdown controls).
+- **OWASP AI Bill of Materials (AIBOM)** — a proposed standard format for documenting an AI system's components, training-data sources, model provenance, and security configuration, modelled on how software bills of materials (SBOMs) standardised supply-chain transparency for conventional software.
+- **C2PA Content Credentials** — a technical specification for cryptographically attaching provenance metadata to digital media, so that a file's origin and edit history (including AI generation) can be verified; backed by a coalition of large technology and media companies.
+- **AIGP certification (IAPP)** — a practitioner certification covering AI governance, with a cited exam cost in the $550–$750 range, 100 questions across four knowledge domains, and a stated pass mark.
 
-## Categories
+## What was left out of this summary
 
-All resources543
-
-Regulations and laws38
-
-Standards and certifications30
-
-Governance frameworks31
-
-Policies and internal governance24
-
-Risk taxonomies23
-
-Assessment and evaluation25
-
-Transparency and documentation20
-
-Incident and accountability19
-
-Organizational roles and processes20
-
-Sector specific governance26
-
-International initiatives26
-
-Ethics and principles19
-
-Tooling and implementation20
-
-Research and academic references22
-
-Datasets and benchmarks18
-
-Open source governance projects24
-
-Foundations21
-
-Enterprise adoption15
-
-Risks and challenges18
-
-Security and safeguards15
-
-Governance frameworks23
-
-Regulation22
-
-Evaluation and benchmarks20
-
-Vendor guidance24
-
-## Featured resources
-
-law
-
-### EU AI Act - Official Full Text
-
-The EU Artificial Intelligence Act is the world's first comprehensive legal framework for AI. It establishes a risk-based approach to AI regulation, categorizing AI systems into prohibited, high-risk, limited-risk, and minimal-risk categories. The regulation sets requirements for high-risk AI systems including risk management, data governance, transparency, human oversight, and accuracy. It applies to providers and deployers of AI systems in the EU market.
-
-Regulations and laws
-
-framework
-
-### OECD AI Principles explained: five principles, what they cover, who adopted them
-
-Practical breakdown of the five 2019 OECD AI Principles: what each one means in practice, which 46+ countries adopted them, and how they map to EU AI Act and ISO 42001.
-
-Governance frameworks
-
-## Recently added
-
-law
-
-### California SB 243: Companion AI Guardrails Act
-
-California Senate Bill 243, signed into law on October 13, 2025 by Governor Gavin Newsom, makes California the first state to mandate specific safety safeguards for AI companion chatbots. The law takes effect January 1, 2026, and requires chatbot operators to implement critical safety measures around interactions with AI, particularly for minors. Key requirements include disclosure that users are interacting with AI, content guardrails preventing sexually explicit material for minors, suicide prevention protocols with crisis resources, and annual reporting to California's Office of Suicide Prevention. The law creates a private right of action for injured individuals.
-
-Regulations and laws
-
-framework
-
-### Practices for governing agentic AI systems: OpenAI's seven safety principles
-
-OpenAI's seven practices for safe agentic AI: accountability assignment, action ledgers, human approval gates, capability boundaries, staged deployment, reversibility design, and shutdown controls.
-
-Governance frameworks
-
-standard
-
-### OWASP AI Bill of Materials (AIBOM)
-
-OWASP's AI Bill of Materials (AIBOM) project establishes a standard format for documenting AI system components, training data sources, model provenance, and security configurations. Similar to how SBOMs transformed software supply chain transparency, AIBOMs aim to bring clarity to AI system composition, enabling organizations to track data lineage, model dependencies, and security configurations throughout the AI lifecycle.
-
-Transparency and documentation
-
-standard
-
-### C2PA Content Credentials Specification
-
-The C2PA (Coalition for Content Provenance and Authenticity) Content Credentials specification establishes a technical standard for cryptographically binding provenance information to digital content. Led by Adobe, Microsoft, Intel, BBC, Truepic, Sony, OpenAI, Google, Meta, and Amazon, this standard enables verification of content origin, modifications, and AI generation across the media ecosystem.
-
-Transparency and documentation
-
-certification
-
-### AIGP certification: IAPP exam cost, body of knowledge, pass mark
-
-AIGP certification guide: \$550-\$750 exam cost, 100 questions, 2.75 hours, 300 pass mark, four domains in the IAPP body of knowledge, and what to study.
-
-Standards and certifications
-
-VerifyWise
-
-VerifyWise is an AI governance platform designed to help businesses use the power of AI safely and responsibly. Our platform ensures compliance and robust AI management without compromising on security.
-
-LinkedInDiscordYouTubeXFacebook
-
-### Platform
-
-- AI governance platform
-- Model Inventory
-- Risk Management
-- Compliance Frameworks
-- Vendor Management
-- Incident Management
-- Policy Manager
-- AI Trust Center
-- Evidence Management
-- Automations
-- LLM Evaluations
-- AI Advisor
-- Shadow AI
-
-### Quick Actions
-
-- Get a demo
-- Join Discord channel
-- Mission
-- Security
-
-### Resources
-
-- Blog
-- AI Trust Index
-- AI bias audits
-- Build vs Buy
-- Tools
-- AI Policy Packs
-- Buyer's guide to AI governance
-- Global AI Regulations
-- AI Governance Lexicon
-- AI Governance Experts
-- AI Governance Library
-- Agentic AI Library
-- Training Partner Program
-- Compare: vs OneTrust
-- Product Overview (PDF)
-
-### Legal
-
-- Terms of Service
-- Privacy Policy
-- Cookie settings
-
-### Connect
-
-- About
-- Contact
-
+VerifyWise's own product marketing — its platform feature list, "get a demo" prompts, comparison pages against competing vendors, and links to its blog, social channels, and policy templates — has been excluded as vendor self-promotion unrelated to the factual content of the directory. Resource descriptions above have been paraphrased in original wording rather than copied from the source; where a specific figure (dollar amount, percentage, date) is cited, it reflects what the source page stated and should be independently verified before being relied upon, since this file is a secondary summary, not the primary source.

@@ -1,252 +1,76 @@
-> Source: https://www.knowlee.ai/blog/iso-42001-checklist-ai-management
-> Archived: 2026-08-17
-
+---
+title: "ISO/IEC 42001 Checklist (2026): The 38-Control Reference for AI Management Systems"
+source_organization: "Knowlee"
+source_url: "https://www.knowlee.ai/blog/iso-42001-checklist-ai-management"
+retrieved: 2026-08-17
+content_type: "blog post / checklist"
+license_note: "Summary and analysis by On The Ground (OTG). Original article © source_organization. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
 
-# ISO/IEC 42001 Checklist (2026): The 38-Control Reference for AI Management Systems
+## What this is
 
-A complete, ungated walkthrough of ISO 42001 controls, what they require, where they overlap with the [EU AI Act](/glossary/ai-act) and ISO 27001, and how to evidence each one for your first audit.
+Knowlee (an AI orchestration vendor) published a long-form checklist walking through ISO/IEC 42001 requirements, grouped into practitioner-friendly themes rather than following the standard's clause order strictly. The original also contains a substantial amount of vendor self-promotion — sections describing how Knowlee's own platform implements specific controls (role enforcement via JWT claims, a cron scheduler that blocks jobs pending human approval, etc.) and calls-to-action for Knowlee's paid "AI Act Readiness Assessment." That vendor material has been removed here as out of scope for a neutral reference; what remains is the general checklist structure, rewritten in original wording and cross-checked against ISO/IEC 42001's actual clause and Annex A structure.
 
-ISO/IEC 42001 is the first certifiable standard for AI Management Systems (AIMS). Published in late 2023, it is now appearing in EU public procurement tender requirements, and AIMS alignment is fast becoming a baseline expectation for enterprise AI vendors. Yet the SERP for "iso 42001 checklist" is dominated by gated consulting whitepapers that list section headings without the actual controls.
+**Important caveat on numbering:** the source article's specific Annex A sub-clause numbers (e.g., "A.5.1/A.5.2/A.5.3" for impact assessment, "A.8" for human oversight) do not match the numbering used in ISO/IEC 42001:2023's published Annex A, as cross-checked against two independent sources (see the companion files `42001_Konfirmity_controls.md` and `42001_Mindsetcyber_Annex-A-controls-list.md` in this directory, both of which agree with each other and with publicly available summaries of the standard's table of contents). In the real standard, Annex A objective A.5 is "Assessing impacts of AI systems" and A.8 is "Information for interested parties" — human oversight is addressed within A.6 (system life cycle) and A.9 (use of AI systems), not as its own numbered objective. Because of this discrepancy, the control numbers below are given only where they align with clause numbers in the main body of the standard (Clauses 4–10, which follow ISO's common high-level structure and are independently verifiable); Annex A content is described by topic rather than by a specific sub-clause number, to avoid repeating numbering that does not appear to be accurate.
 
-This article changes that. Below is the complete control-level checklist, 38 items drawn from the standard's core clauses and Annex A ([the canonical AIMS definition](/glossary/iso-42001)), with evidence guidance and cross-mappings to the EU AI Act and ISO 27001 so you can reuse existing compliance work rather than starting from zero. This is the control-by-control reference: work through it once you know you're pursuing certification. If you need the phased rollout first, scoping, documentation, training, audit, in what order and on what timeline, start with the [ISO 42001 Implementation Guide](/blog/iso-42001-implementation-guide) and come back here to check off controls as you go.
+## The checklist, reorganized by theme
 
-If you need the full multi-framework picture first, start with the [complete AI compliance checklist](/blog/ai-compliance-checklist-2026) and return here for the ISO 42001 deep dive.
+### Governance and documentation
 
-------------------------------------------------------------------------
+- **Organizational context (Clause 4.1)** — document the internal and external issues relevant to the AI management system (AIMS): regulatory environment, competitive landscape, organizational structure.
+- **AIMS scope (Clause 4.3)** — formally define which AI systems, processes, and business units are in scope, and record the rationale for anything excluded. A scope statement copied wholesale from an existing ISO 27001 scope, without AI-specific tailoring, is a common audit finding.
+- **AI policy (Clause 5.2)** — top management establishes and communicates a written AI policy committing to responsible AI use, continual improvement of the AIMS, and alignment with applicable legal obligations.
+- **AIMS objectives (Clause 6.2)** — set measurable governance objectives with named owners and a defined measurement method.
+- **Roles and accountability** — assign named individuals to AI-related roles (system owner, AIMS coordinator, oversight/reviewer functions) with documented authority to act — not just a title. Clause 5.3 requires top management to ensure these roles are assigned and communicated.
 
-## Governance and Documentation {#governance-and-documentation}
+Organizations that already operate a certified ISO 27001 information security management system can typically extend their existing context, scope, and document-control work rather than building a parallel AI-specific set from scratch — though a separate AIMS scope statement and AI policy are still expected.
 
-### AI Policy, Scope, and AIMS Boundaries {#ai-policy-scope-aims}
+### Data governance
 
-Before a single control can be evidenced, the organization must draw a clear boundary around what the AIMS covers and publish a policy committing to [responsible AI](/glossary/responsible-ai).
+Annex A's data-related controls generally ask for: a record of what data each AI system uses (source, format, categories, including whether personal or sensitive data is involved); documented data-quality criteria for training and operational data; access restrictions on training data, model weights, and inference infrastructure; provenance and licensing records for datasets, particularly third-party ones; and treatment of personal data used in AI systems under the same privacy obligations (e.g., GDPR) that apply elsewhere in the organization, with AI-specific considerations such as training-data retention and how data-subject rights requests are fulfilled against a trained model.
 
-**Controls in this section:**
+**On ISO 27001 overlap:** it's commonly claimed in vendor marketing that a fixed percentage of ISO/IEC 42001 controls map directly onto ISO 27001 controls (a figure of "40%" appears in some sources, including the original version of this article). OTG could not independently verify a specific percentage, and control-mapping estimates like this vary depending on how granularly controls are counted and how "direct equivalent" is defined. What can be said with more confidence, based on the structural comparison in the companion Konfirmity and Mindset Cyber files, is that organizations with a mature ISMS have a real head start on the process and documentation controls (access control, logging, supplier assessment, document control, internal audit, management review), while several ISO/IEC 42001 Annex A objectives — impact assessment, AI-specific data provenance and quality, and use-of-AI-system monitoring — have no direct ISO 27001 analog and require new work.
 
-1.  **\[Clause 4.1, Organizational context\]** Document internal and external issues that affect the AIMS (regulatory environment, competitive landscape, organizational structure). Evidence: a context register or equivalent section in your AIMS scope document.
+### Risk and impact assessment
 
-2.  **\[Clause 4.3, AIMS scope\]** Define the scope formally: which AI systems, processes, and organizational units are in scope; what is explicitly excluded and why. Evidence: a signed scope statement. Auditors check that scope exclusions are justified, excluding a system that poses obvious risk triggers a finding.
+Annex A's impact-assessment controls call for: an assessment of potential harm (physical, psychological, financial, discriminatory) for every AI system that affects people; proportionate controls, so that a low-impact system isn't held to the same evidentiary bar as one used in hiring or credit decisions; and defined triggers for re-assessment (new use case, new data source, retraining, a materially different user population).
 
-3.  **\[Clause 5.2, [AI Policy](/glossary/ai-policy)\]** Top management must establish, communicate, and maintain a written AI Policy that commits to: responsible AI use, continual improvement of the AIMS, and alignment with applicable legal obligations. Evidence: a policy document with a revision history and distribution record.
+Separately, Clause 6.1 requires a general risk assessment and treatment process covering AI-specific risks (model failure, discriminatory output, data poisoning, adversarial inputs, third-party model dependencies), recorded in a risk register with named owners and treatment plans.
 
-4.  **\[Clause 6.2, AIMS objectives\]** Set measurable [AI governance](/glossary/ai-governance) objectives (e.g., "100% of AI systems with risk level = high reviewed before deployment"). Evidence: an objectives register with targets, responsible owners, and measurement methods.
+ISO/IEC 42001 itself does not define risk tiers — it is framework-agnostic. Organizations operating under the EU AI Act commonly use the Act's own risk classification (prohibited, high-risk, GPAI with systemic risk, limited/transparency obligations, minimal risk) to decide how deeply to implement the AIMS controls, applying the fullest Annex A control set to high-risk systems and a lighter touch elsewhere. This is a common implementation practice rather than a requirement written into ISO/IEC 42001 itself.
 
-**Auditor tip:** Clause 4-6 deficiencies are the most common first-audit findings for organizations with mature ISO 27001 programs. The gap is usually that the AIMS scope is written as a copy of the ISMS scope rather than an AI-specific document.
+Clause 9 (performance evaluation — monitoring, internal audit, management review) is frequently cited as overlapping substantially with the EU AI Act's post-market monitoring obligations for high-risk systems (Article 9(7)), meaning a single monitoring process can often serve both purposes. Readers relying on this for compliance purposes should check the current text of the Act rather than take the cross-reference as legal advice.
 
-**EU AI Act overlap:** The AI Policy requirement mirrors Article 9 of the EU AI Act's risk management obligation for high-risk AI providers. A single policy document can address both if it is explicit about applicable AI Act obligations.
+### Vendor and third-party due diligence
 
-**ISO 27001 reuse:** ISO 27001 Clause 4.1 and 4.3 context-and-scope work is directly portable. Extend your existing ISMS context analysis to cover AI-specific issues rather than creating a separate document.
+Before deploying a third-party AI system, Annex A calls for assessing whether the supplier has documented the system's intended purpose, performance, known limitations, and data governance practices; for contracts that require notification of significant changes, performance guarantees, incident reporting, and audit rights; and for ongoing (not just pre-procurement) monitoring of third-party AI systems, at a frequency proportionate to risk.
 
-### Roles and Responsibilities (Annex A.3) {#roles-responsibilities-annex-a3}
+Where a supplier processes personal data, this due diligence typically runs alongside a GDPR Article 28 data processing agreement rather than as a separate workstream.
 
-5.  **\[Annex A.3.1, AI Roles\]** Assign named individuals to: AI system owner, AIMS coordinator (the person responsible for maintaining the AIMS), and AI reviewer (oversight of individual system decisions). Evidence: an assignment matrix or equivalent HR/governance record.
+### Human oversight and AI literacy
 
-6.  **\[Annex A.3.2, Role authorities\]** Each role must have documented authority to act, not just a title. The AI system owner must have the authority to halt a system. Evidence: documented role descriptions with authority levels. Verbal authority structures fail audits.
+Annex A calls for: competency requirements defined per AI-related role; training proportionate to each role's exposure to AI (strategic literacy for senior management, process-specific training for operators, deeper technical grounding for whoever maintains the AIMS); and general staff awareness of the AI policy, individual responsibilities, and how to report concerns.
 
-7.  **\[Clause 5.3, Accountability\]** Top management must ensure AIMS roles are assigned and communicated. Evidence: minutes of an executive decision, or a board resolution for organizations using AI in high-risk contexts.
+On the design side, AI systems in scope should be designed or configured so a human can monitor, interpret, override, interrupt, and halt their outputs; named individuals should hold documented, tested authority to do so; and override/halt mechanisms should be tested, not just described on paper.
 
-**Knowlee implementation note:** Knowlee maintains a public technical compliance map showing how each ISO 42001 control maps to platform features. For §5.3, Knowlee implements role enforcement via JWT claims (`admin/analyst/viewer`) with session ownership tracking, so every AI action is traceable to an authenticated role.
+In practice, training records are often the hardest evidence to assemble for a first audit — not because the requirement is conceptually difficult, but because records tend to be scattered across HR systems, LMS platforms, and email threads, and need consolidating before an assessor asks for them.
 
-------------------------------------------------------------------------
+### Operational lifecycle
 
-## Data Privacy and Security {#data-privacy-and-security}
+For each AI system in scope, the operational controls generally expect: documentation of purpose, intended use, user population, performance metrics, known limitations, and data used; logging sufficient to support review and incident investigation, with logs that are immutable, timestamped, and retained for a defined period; a documented change-management process (covering model updates, new use cases, data source changes) that includes re-assessing impact; an incident-management procedure covering identification, recording, investigation, and response to unexpected AI behavior that causes harm or a near-miss; and a retirement/decommissioning process covering data deletion, access revocation, documentation archival, and stakeholder notice.
 
-### Data Lifecycle Controls (Annex A.7) {#data-lifecycle-controls}
+Clause 8.1 is the general operational-planning requirement underpinning all of this — that the organization plans, implements, and controls the processes needed to meet its AIMS commitments.
 
-8.  **\[Annex A.7.1, Data for AI systems\]** Document what data is used by each AI system: source, format, volume, data categories (personal/sensitive/non-personal). Evidence: a data register per AI system, linked to your AI system inventory.
+### Documentation and audit evidence
 
-9.  **\[Annex A.7.2, Data quality\]** Establish quality criteria for training and operational data. Undocumented quality standards are a gap, the auditor will ask how you know the model's training data was appropriate. Evidence: a data quality policy or per-system quality criteria in the system documentation.
+Clause 7.5 requires documented information to be controlled — approved, versioned, distributed, retained, and disposed of according to a defined procedure. Auditors tend to check version history and approval records more closely than document wording itself; a well-written policy with no approval trail is more likely to draw a finding than a shorter policy with a clear sign-off history.
 
-10. **\[Annex A.7.3, Data access controls\]** Restrict access to AI training data, model weights, and inference infrastructure on a need-to-know basis. Evidence: access control lists, IAM policies, or equivalent records.
+ISO/IEC 42001 specifies mandatory documented information at several points, including: the AIMS scope (4.3), the AI policy (5.2), risk assessment results (6.1), objectives (6.2), competency evidence (7.2), internal audit results (9.2), and management review outputs (9.3). Clause 9.2 requires planned internal audits against the standard; Clause 9.3 requires periodic management review covering audit results, objective performance, risk status, and improvement opportunities; and Clause 10 requires nonconformities to be documented, root-caused, corrected, and tracked to prevent recurrence.
 
-11. **\[Annex A.7.4, Data provenance\]** Record the provenance of datasets used in AI system development and operation. For third-party datasets, retain licensing and terms records. Evidence: dataset metadata records.
+## On timelines and cost
 
-12. **\[Annex A.7.5, Data privacy in AI\]** Personal data used in AI systems must be subject to the same GDPR obligations as personal data elsewhere in the organization, with an AI-specific addendum covering retention of training data and subject rights fulfillment. Evidence: DPIA referencing the AI system, or an AI-specific section in an existing DPIA. See also [DPIA for AI systems](/blog/dpia-for-ai-systems-template).
+The original source article quoted specific implementation timelines (roughly 4–8 months for organizations with an existing ISO 27001 ISMS, 9–15 months without one) and specific EUR certification-audit fee ranges. OTG has not independently verified these figures — actual timelines and certification body pricing vary considerably by organization size, scope, geography, and the certification body chosen, and figures published in a single vendor blog post should not be relied on as market benchmarks. Readers evaluating a real implementation timeline or budget should get current quotes from accredited certification bodies directly.
 
-### ISO 42001 ↔ ISO 27001 / GDPR Overlap Map {#iso-overlap-map}
+## ISO/IEC 42001 vs. the EU AI Act, in short
 
-This is the highest-leverage efficiency question for teams already operating an ISMS. The short answer: roughly 40% of Annex A ISO 42001 controls have direct ISO 27001 equivalents; the remainder are AI-specific with no ISMS analog.
-
-| ISO 42001 Control Area                                           | ISO 27001 Equivalent          | GDPR Article                  | Reusable?                            |
-|------------------------------------------------------------------|-------------------------------|-------------------------------|--------------------------------------|
-| Data access controls (A.7.3)                                     | A.9 (Access Control)          | Art. 25 (Privacy by design)   | Yes, extend existing                 |
-| Audit trail / logging (A.6.2)                                    | A.12.4 (Logging)              | Art. 5(2) (Accountability)    | Yes, extend existing                 |
-| Third-party AI assessment (A.10)                                 | A.15 (Supplier relationships) | Art. 28 (DPA)                 | Yes, extend existing                 |
-| AI system impact assessment (A.5)                                | No equivalent                 | Art. 35 (DPIA)                | Partial, new AIMS procedure required |
-| AI roles and responsibilities (A.3)                              | A.6.1 (Security roles)        | ,                             | Partial, extend with AI authorities  |
-| [AI literacy](/glossary/ai-literacy) training (A.4)              | A.7.2 (Awareness)             | ,                             | Partial, add AI-specific content     |
-| [Human oversight](/glossary/human-oversight-ai) mechanisms (A.8) | No equivalent                 | Art. 22 (Automated decisions) | No, new requirement                  |
-| AI lifecycle management (A.6)                                    | No equivalent                 | ,                             | No, new requirement                  |
-
-**Bottom line:** if you have a certified ISO 27001 ISMS, you have the governance plumbing. You need AI-specific content, not a parallel system.
-
-------------------------------------------------------------------------
-
-## Risk and Ethics {#risk-and-ethics}
-
-### AI System Impact Assessment (Annex A.5) {#ai-system-impact-assessment}
-
-13. **\[Annex A.5.1, Impact assessment scope\]** Conduct an impact assessment for every AI system that affects people, employees, customers, third parties. The assessment must consider potential harms: physical, psychological, financial, discriminatory. Evidence: a completed impact assessment per system.
-
-14. **\[Annex A.5.2, Proportionate controls\]** The controls implemented must be proportionate to the identified impacts. A system with low impact and no sensitive data does not require the same control intensity as a system affecting hiring or credit decisions. Evidence: documented control selection rationale.
-
-15. **\[Annex A.5.3, Assessment update triggers\]** Define triggers that require reassessment: new use cases, new data sources, model retraining, changes to the user population. Evidence: a written update procedure referenced in the impact assessment template.
-
-### AI Act Risk Classification Mapped to ISO 42001 Controls {#ai-act-risk-mapping}
-
-ISO 42001 is framework-agnostic, it does not impose its own risk tiers. But for EU organizations, mapping EU AI Act risk classification to ISO 42001 control intensity produces a practical implementation path.
-
-| EU AI Act Classification        | ISO 42001 Control Intensity  | Key Controls Required                                |
-|---------------------------------|------------------------------|------------------------------------------------------|
-| **Prohibited** (Art. 5)         | N/A, system must not exist   | Clause 4.3 scope exclusion + legal sign-off          |
-| **High-risk** (Annex III)       | Full Annex A implementation  | A.3, A.4, A.5, A.6, A.7, A.8, A.9, A.10 all required |
-| **GPAI with systemic risk**     | Full + adversarial testing   | A.6, A.7, A.9 with enhanced monitoring               |
-| **Transparency-only** (Art. 50) | Lightweight, A.3, A.6.2, A.8 | Documentation + human oversight + logging            |
-| **Minimal risk**                | Voluntary, A.5 recommended   | Impact assessment to confirm classification          |
-
-16. **\[§6.1, Risk assessment process\]** Identify, assess, and treat AI-specific risks: model failure, discriminatory output, data poisoning, adversarial inputs, third-party model dependencies. Evidence: a risk register with treatments and residual risk acceptance. See also [NIST AI RMF implementation guide](/blog/nist-ai-rmf-implementation-guide) for a complementary risk methodology.
-
-17. **\[§6.1, Risk treatment plan\]** Document selected risk treatments, responsible owners, and target completion dates. Evidence: a treatment plan linked to the risk register, reviewed at management review intervals.
-
-18. **\[Clause 9, AI Act high-risk classification overlap\]** For [AI Act high-risk systems](/blog/ai-act-high-risk-systems), the Clause 9 monitoring obligation (performance measurement, internal audits, management review) directly satisfies EU AI Act Article 9(7) post-market monitoring requirements. One documented monitoring process covers both.
-
-> **Score your AI Act + ISO 42001 readiness in 20 minutes.** The [AI Act Readiness Assessment](/tools/ai-act-readiness-assessment) maps your current controls to both frameworks and identifies the highest-priority gaps.
-
-------------------------------------------------------------------------
-
-## Vendor and Third-Party {#vendor-and-third-party}
-
-### Supplier Due-Diligence Requirements {#supplier-due-diligence}
-
-19. **\[Annex A.10.1, Third-party AI assessment\]** Before deploying an AI system procured from a third party, assess whether the supplier has documented: the system's intended purpose, performance metrics, known limitations, and [data governance](/glossary/data-governance) practices. Evidence: a completed supplier assessment record.
-
-20. **\[Annex A.10.2, Contractual requirements\]** Contracts with AI suppliers must include: obligations to notify of significant changes, performance guarantees, incident reporting procedures, and provisions for you to conduct or commission audits. Evidence: contract review records showing these clauses are present.
-
-21. **\[Annex A.10.3, Ongoing monitoring\]** Third-party AI systems must be monitored after deployment, not just assessed at procurement. Define review frequency based on risk level. Evidence: a monitoring schedule with records of completed reviews.
-
-**ISO 27001 reuse:** Annex A.15 supplier relationship controls are directly portable. Extend your existing supplier assessment template with AI-specific questions (intended purpose, training data provenance, model update frequency) rather than creating a separate AI procurement process.
-
-**GDPR link:** Where the AI supplier processes personal data on your behalf, Article 28 GDPR requires a [Data Processing Agreement](/glossary/data-processing-agreement). Combine the ISO 42001 supplier assessment with your DPA review into a single supplier onboarding workflow.
-
-------------------------------------------------------------------------
-
-## Human Oversight and Training {#human-oversight-and-training}
-
-### AI Literacy Program (Annex A.4) {#ai-literacy-program}
-
-22. **\[Annex A.4.1, Competency requirements\]** Define the competency levels required for each AI-related role: system operators, reviewers, AIMS coordinator, senior management. Evidence: a competency matrix per role.
-
-23. **\[Annex A.4.2, Training provision\]** Provide training proportionate to each role's exposure to AI systems. Senior management needs strategic literacy; operators need process-specific training; the AIMS coordinator needs deep technical understanding. Evidence: training records with completion dates and content descriptions.
-
-24. **\[Annex A.4.3, Awareness\]** All staff who use, operate, or oversee AI systems must be aware of: the AI Policy, their responsibilities, and how to report concerns or incidents. Evidence: awareness records (e-learning completions, briefing attendance).
-
-**Practical note:** ISO 42001 Annex A.4 is frequently the most time-consuming control to evidence in an initial audit, not because it is technically complex, but because training records are often scattered across HR systems, LMS platforms, and informal email trails. Consolidate records before the audit.
-
-### Human-in-the-Loop Control Implementation {#human-in-the-loop}
-
-25. **\[Annex A.8.1, Human oversight design\]** AI systems must be designed, or configured, so that humans can monitor, interpret, override, interrupt, and halt AI outputs. Evidence: design documentation showing how oversight capabilities work, tested with scenarios.
-
-26. **\[Annex A.8.2, Oversight assignment\]** Named individuals must be assigned oversight responsibility for each AI system. Their authority to halt or override the system must be documented and tested. Evidence: oversight assignment records with documented authority.
-
-27. **\[Annex A.8.3, Override mechanisms\]** Override and halt capabilities must be technically tested, not just documented. Evidence: test records showing that override actions function as intended. See also [human-in-the-loop AI policy template](/blog/human-in-the-loop-ai-policy-template).
-
-**Knowlee implementation note:** Knowlee's technical compliance map documents blocking approval gates for jobs requiring human oversight: the cron scheduler skips execution of any job with "human-oversight required" set to true unless approver and approval timestamp are populated. Every approval is appended to the approvals log for audit purposes, satisfying both Annex A.8 and EU AI Act Article 14.
-
-------------------------------------------------------------------------
-
-## Operational Lifecycle Controls {#operational-lifecycle-controls}
-
-### Development, Deployment, Monitoring (Annex A.6) {#development-deployment-monitoring}
-
-28. **\[Annex A.6.1, AI system documentation\]** Maintain documentation for every AI system in scope: purpose, intended use, user population, performance metrics, known limitations, data used. Evidence: a documentation record per system, version-controlled.
-
-29. **\[Annex A.6.2, Logging and traceability\]** AI systems must log operational events at a level of detail sufficient to support review and incident investigation. Logs must be immutable, timestamped, and retained for a defined period. Evidence: logging configuration records and a sample log extract.
-
-30. **\[Annex A.6.3, Change management\]** Changes to AI systems, model updates, new use cases, data source changes, must go through a documented change process that includes impact reassessment. Evidence: change records with impact assessment references.
-
-31. **\[Annex A.6.4, Incident management\]** Establish a procedure for identifying, recording, investigating, and responding to AI incidents. An incident is any unexpected AI behavior that results in harm or near-miss. Evidence: an incident procedure document and, ideally, records of incidents handled through it.
-
-32. **\[Annex A.6.5, Retirement/deprecation\]** Define a process for retiring AI systems: data deletion, access revocation, documentation archival, and stakeholder notification. Evidence: a retirement procedure referenced in the AI system inventory.
-
-33. **\[Clause 8.1, Operational planning and control\]** The organization must plan, implement, control, and maintain the processes needed to meet AIMS requirements. This is the catch-all operational clause. Evidence: operational procedures for each significant AIMS process.
-
-------------------------------------------------------------------------
-
-## Documentation Evidence, What an Auditor Actually Looks at {#documentation-evidence}
-
-Clause 7.5 requires documented information to be controlled, created, updated, distributed, retained, and disposed of according to defined procedures. This is less about having perfect documents and more about demonstrating discipline.
-
-**The auditor's document request list for a first-stage audit (Stage 1) typically includes:**
-
-34. **\[Clause 7.5, Document control procedure\]** How documents are approved, versioned, and distributed. Evidence: a document control procedure (this can be your existing ISMS document control procedure extended to cover AIMS documents).
-
-35. **\[Clause 7.5, Mandatory documented information\]** ISO 42001 specifies required documented information across clauses: AIMS scope (4.3), AI Policy (5.2), risk assessment results (6.1), objectives (6.2), competency evidence (7.2), audit results (9.2), management review outputs (9.3). Evidence: each of these documents, current and version-controlled.
-
-36. **\[Clause 9.2, Internal audit program\]** The AIMS must be subject to planned internal audits against the standard's requirements. Evidence: an audit program, audit plans for each completed cycle, and audit reports with findings.
-
-37. **\[Clause 9.3, Management review\]** Top management must review the AIMS at planned intervals. The review agenda must include: audit results, objective performance, risk status, and opportunities for improvement. Evidence: management review minutes with required agenda items documented.
-
-38. **\[Clause 10, Nonconformity and corrective action\]** Any nonconformity must be documented, cause-analyzed, corrected, and prevented from recurring. Evidence: a corrective action log (can be your existing ISMS CAR system) with AI incident examples.
-
-**Document control tip:** Auditors check version history and approval records more than document content. A well-written policy with no approval record will generate a finding. A concise policy with a clear version history and sign-off will pass.
-
-------------------------------------------------------------------------
-
-## ISO 42001 vs. EU AI Act, What Each Gets You {#iso-42001-vs-eu-ai-act}
-
-These two frameworks serve different masters and should not be conflated.
-
-| Dimension               | ISO/IEC 42001                                           | EU AI Act                                                    |
-|-------------------------|---------------------------------------------------------|--------------------------------------------------------------|
-| **Nature**              | Voluntary standard (certifiable)                        | Mandatory regulation (enforceable)                           |
-| **Scope**               | Any organization using or providing AI                  | Organizations placing AI on the EU market                    |
-| **Core mechanism**      | Management system (plan-do-check-act)                   | Risk classification + mandatory requirements per tier        |
-| **Enforcement**         | Certification body audit                                | National market surveillance authorities                     |
-| **Certification value** | Trust signal for procurement, tenders, enterprise sales | Not a concept, compliance is a legal obligation              |
-| **Key output**          | AIMS certificate                                        | Conformity declaration (high-risk), registration (Annex III) |
-
-**Does ISO 42001 certification automatically satisfy EU AI Act obligations?** No. The two frameworks overlap significantly in substance but are legally independent. ISO 42001 certification demonstrates that your AI governance processes meet the standard's requirements; it does not constitute a conformity assessment under the EU AI Act.
-
-That said, an ISO 42001-aligned organization building an AI Act compliance program has a substantial head start: the AIMS scope maps to the AI Act's system inventory; the risk assessment process maps to Article 9; the logging requirements map to Article 12; the human oversight controls map to Article 14. Work done for the standard directly reduces the effort required for the regulation.
-
-See the [complete AI compliance overview](/blog/ai-compliance-checklist-2026) for the full cross-framework mapping across EU AI Act, GDPR, ISO 42001, and NIST AI RMF.
-
-For organizations specifically operating in fintech or financial services, [AI compliance automation in fintech](/blog/ai-compliance-automation-fintech) covers sector-specific requirements that layer on top of ISO 42001.
-
-------------------------------------------------------------------------
-
-## Frequently Asked Questions {#faq}
-
-### Is ISO 42001 mandatory for organizations using AI in the EU? {#faq-mandatory}
-
-No. ISO/IEC 42001 is a voluntary standard, it is not legally required by any current EU regulation. However, it is increasingly referenced in EU public procurement criteria and in enterprise vendor qualification requirements, making it a de facto requirement for organizations selling AI capabilities to public sector buyers or large enterprises. The EU AI Act imposes its own mandatory requirements, which are separate from ISO 42001.
-
-### How long does ISO 42001 implementation take for a mid-market organization? {#faq-implementation-time}
-
-For an organization with an existing ISO 27001 ISMS, the realistic timeline is four to eight months from gap assessment to Stage 2 audit: one to two months for gap analysis and remediation planning, two to four months for implementing missing controls and building documentation, and one month for Stage 1 audit followed by Stage 2 audit scheduling. Organizations without existing management system infrastructure should plan for nine to fifteen months.
-
-### Can ISO 27001 controls be reused to cover ISO 42001 requirements? {#faq-iso27001-reuse}
-
-Substantially yes, for the process and documentation infrastructure (document control, internal audit, management review, supplier management, access control, incident management). These represent roughly 40% of the overall compliance effort. The remaining 60% is AI-specific: impact assessments, AI system documentation, human oversight mechanisms, AI literacy training, and AI lifecycle management. You cannot simply extend an ISMS certificate to cover AIMS requirements, a separate ISO 42001 audit is required.
-
-### Does ISO 42001 certification automatically make us EU AI Act compliant? {#faq-ai-act-compliance}
-
-No. ISO 42001 certification demonstrates that your AI management system meets the standard's process requirements. EU AI Act compliance is a separate legal obligation that depends on your specific AI systems, their risk classification, and your role in the AI value chain (provider or deployer). The two frameworks overlap substantially in substance, ISO 42001 implementation reduces EU AI Act compliance effort, but they are legally independent instruments. An ISO 42001 certification is not an EU AI Act conformity assessment.
-
-### What is the typical cost range for ISO 42001 audit and certification? {#faq-cost}
-
-Certification body fees vary by organization size, scope, and geography, but market rates in 2026 for a mid-market organization are approximately EUR 8,000-18,000 for the combined Stage 1 and Stage 2 initial certification audit, plus annual surveillance audit fees of EUR 4,000-9,000. These are audit fees only, they exclude internal implementation effort, consultant costs if used, and any remediation work required to close gaps identified in Stage 1. Organizations with an existing ISO 27001 certificate with the same certification body may be able to negotiate a combined audit discount.
-
-### This is the control checklist, where's the step-by-step rollout plan? {#faq-implementation-guide}
-
-Here it's the reference, all 38 controls in one place so you can check status against each one. For the phase-by-phase rollout, from initial scoping through the certification audit, with timelines and cost estimates per phase, see the [ISO 42001 Implementation Guide](/blog/iso-42001-implementation-guide).
-
-------------------------------------------------------------------------
-
-## How Knowlee Supports ISO 42001 Implementation
-
-ISO 42001 requires technical evidence, not just policy documents. Many of the 38 controls above demand verifiable platform capabilities: immutable audit logs, role-based access with documented authority, blocking approval gates for human oversight, and a system registry with risk metadata.
-
-Knowlee maintains a technical compliance map showing how platform features directly address §5.3 (roles and session ownership), §6.1 (risk level and data categories on every job and workspace), §7.5 (JSONL audit trail with per-session cost and token breakdown), and §8.4 (lifecycle registry with execution tracking). The controls are implemented at the platform layer, not in a separate compliance module bolted on afterward.
-
-Get the free [AI Act Readiness Assessment](/tools/ai-act-readiness-assessment) to map your current controls against both ISO 42001 and the EU AI Act and identify the highest-priority gaps before your first audit.
+The two are legally independent: ISO/IEC 42001 is a voluntary, certifiable management-system standard; the EU AI Act is a mandatory regulation enforced by national market-surveillance authorities. ISO/IEC 42001 certification is not, by itself, an EU AI Act conformity assessment, and passing one does not automatically satisfy the other. That said, the two overlap substantially in substance (system inventories, risk assessment, logging, human oversight), so work done to satisfy ISO/IEC 42001 generally reduces — without eliminating — the effort needed for AI Act compliance.
