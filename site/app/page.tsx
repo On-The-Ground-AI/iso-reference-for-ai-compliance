@@ -20,8 +20,9 @@ export default function HomePage() {
           Straits Interactive
         </a>
         . The course — its scope and choice of standards — originates from Straits Interactive&apos;s
-        trainers, not from On The Ground. This pack is independently-compiled reference material
-        supporting that course, not the course material itself. Practitioner summaries below are
+        trainers (Harish Pillay, Mario Novello, and Cyndi Chua), not from On The Ground. This
+        pack is independently-compiled reference material supporting that course, not the course
+        material itself. Practitioner summaries below are
         OTG&apos;s paraphrase of secondary interpretations, not the ISO/IEC standard text, which
         is paywalled. See <Link href="/methodology">Methodology</Link> for sourcing rules and
         what was excluded from each source during rewriting.

@@ -13,6 +13,12 @@ Interactive's trainers, not from On The Ground. What's in this repo is independe
 publicly-sourced reference material that supports that course; it is not the course material
 itself, and no course content is reproduced here (see below).
 
+**Course trainers:**
+
+- **Harish Pillay** — MSEE, RHCE, AIGP, CAIEG, FSCS, FIES, LM IEEE, RISC-V, Software Heritage Ambassador, Dy Chair ITSC
+- **Mario Novello** — Candidate Doctorate in GenAI, MBA, Adv Cert Gen AI, Ethics and DP, Adv Cert in Gen AI App Design
+- **Cyndi Chua** — MDE(IP), IAPP(CIPM, AIGP), EXIN(AICP), OECG(GRCP/A, IDPP, IPMP, IAIP), Adv Dip (DP, DG), Adv Cert Gen AI, Ethics / Gen AI App Design
+
 ---
 
 ## How this pack is sourced, and why it's written the way it is
