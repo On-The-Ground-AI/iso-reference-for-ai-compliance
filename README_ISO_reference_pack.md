@@ -4,6 +4,13 @@ A free-to-read reference pack on the ISO/IEC standards most relevant to building
 AI systems responsibly — AI risk management, AI management systems, AI system life cycle,
 data life cycle, and related standards.
 
+**Context and credit:** This pack was compiled to accompany *App Design in Legal*, an SMU
+Academy course conducted by trainers from [Straits Interactive](https://www.straitsinteractive.com).
+The course itself — its scope, structure, and choice of standards — originates from Straits
+Interactive's trainers, not from On The Ground. What's in this repo is independently-compiled,
+publicly-sourced reference material that supports that course; it is not the course material
+itself, and no course content is reproduced here (see below).
+
 ---
 
 ## How this pack is sourced, and why it's written the way it is
@@ -21,9 +28,10 @@ Two rules shape every file in here:
    preview PDFs ISO/IEC publish themselves (typically the table of contents, scope, and opening
    clauses). Nobody in this pack reproduces a full purchased standard.
 
-This pack's coverage was cross-checked against a private SMU/Straits Interactive training deck
-on AI application design, which is course material restricted to its participants and carries
-an explicit no-reproduction notice. **No text, slide content, or images from that deck appear
+This pack's coverage was cross-checked against a private training deck for that
+[Straits Interactive](https://www.straitsinteractive.com)-led SMU Academy course on AI
+application design, which is course material restricted to its participants and carries an
+explicit no-reproduction notice. **No text, slide content, or images from that deck appear
 anywhere in this repo.** The only thing derived from it is `03_SMU_Deck_ISO_Index.md`, a
 factual index of *which* standard numbers and generic template types the deck references —
 standard names aren't copyrightable expression, and no slide wording is quoted.
@@ -112,11 +120,12 @@ source article. Files note where claims from the underlying source couldn't be v
 | `AGGREGATOR_AIStandardsHub.md` | Alan Turing Institute + BSI. Dedicated, regularly-updated page for nearly every standard here. Most authoritative free tracker |
 | `AGGREGATOR_VerifyWise_governance-library.md` | Clean explainers with cross-standard mapping |
 
-**Related standards and templates — OTG's own original research**
+**Related standards and templates — OTG's supporting research**
 
 Unlike the files above, these two aren't rewrites of a single third-party explainer — they're
-OTG-authored brief profiles compiled from multiple public sources, added after a cross-reference
-pass against the private training deck indexed in `03_SMU_Deck_ISO_Index.md` flagged gaps.
+OTG-authored brief profiles compiled from multiple public sources, added after cross-referencing
+against the [Straits Interactive](https://www.straitsinteractive.com) SMU Academy course deck
+(indexed in `03_SMU_Deck_ISO_Index.md`), which surfaced gaps in this pack's coverage.
 
 | File | Why it's useful |
 |---|---|
@@ -136,7 +145,7 @@ Both block automated retrieval. Open them in a browser:
 
 ---
 
-## Standards referenced in the cross-checked training deck
+## Standards referenced in the Straits Interactive course deck
 
 See `03_SMU_Deck_ISO_Index.md` for the full, properly-caveated factual index (standard numbers
 and neutral topic labels only — no slide text reproduced). It originally flagged five standards

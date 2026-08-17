@@ -26,7 +26,7 @@ const GROUP_LABELS: Record<string, string> = {
   "5339": "ISO/IEC 5339 — Guidance for AI Applications",
   "24030": "ISO/IEC TR 24030 & TR 5469 — Use Cases & Functional Safety",
   AGGREGATOR: "Aggregators & Trackers",
-  RELATED_STANDARDS_briefly: "Related Standards (OTG original research)",
+  RELATED_STANDARDS_briefly: "Related Standards (OTG supporting research)",
   TEMPLATE_model: "Templates & Documentation Practices",
 };
 

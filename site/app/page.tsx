@@ -14,10 +14,17 @@ export default function HomePage() {
         On The Ground, with a citation back to its source — not a copy of the source text.
       </p>
       <div className="notice">
-        Practitioner summaries are OTG&apos;s paraphrase of secondary interpretations, not the
-        standard text itself, which is paywalled by ISO/IEC. See{" "}
-        <Link href="/methodology">Methodology</Link> for sourcing rules and what was excluded
-        from each source during rewriting.
+        Compiled to accompany <em>App Design in Legal</em>, an SMU Academy course conducted by
+        trainers from{" "}
+        <a href="https://www.straitsinteractive.com" target="_blank" rel="noopener noreferrer">
+          Straits Interactive
+        </a>
+        . The course — its scope and choice of standards — originates from Straits Interactive&apos;s
+        trainers, not from On The Ground. This pack is independently-compiled reference material
+        supporting that course, not the course material itself. Practitioner summaries below are
+        OTG&apos;s paraphrase of secondary interpretations, not the ISO/IEC standard text, which
+        is paywalled. See <Link href="/methodology">Methodology</Link> for sourcing rules and
+        what was excluded from each source during rewriting.
       </div>
 
       {groups.map((group) => (

@@ -29,9 +29,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="site-footer">
           <div className="wrap">
             <p>
-              Compiled by On The Ground. Every summary is original wording with a source
-              citation — see the <Link href="/methodology">methodology</Link> page for how
-              this pack is sourced and why.
+              Compiled by{" "}
+              <a href="https://ontheground.agency/" target="_blank" rel="noopener noreferrer">
+                On The Ground
+              </a>
+              , to accompany a{" "}
+              <a href="https://www.straitsinteractive.com" target="_blank" rel="noopener noreferrer">
+                Straits Interactive
+              </a>
+              -led SMU Academy course. Every summary is original wording with a source citation
+              — see the <Link href="/methodology">methodology</Link> page for how this pack is
+              sourced and why.
             </p>
           </div>
         </footer>

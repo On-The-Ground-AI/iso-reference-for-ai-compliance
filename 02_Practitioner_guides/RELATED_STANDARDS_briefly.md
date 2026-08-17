@@ -6,7 +6,8 @@ sources for each standard (ISO/IEC's own standard-listing pages, national standa
 and, where useful, secondary write-ups) and then writing an independent summary — not quoting
 or paraphrasing any one source at length. Per-standard source lists are given in each section.
 
-**Why these five are here:** a cross-reference pass of a private training deck (see
+**Why these five are here:** a cross-reference pass of the private training deck for the
+[Straits Interactive](https://www.straitsinteractive.com)-led SMU Academy course (see
 `03_SMU_Deck_ISO_Index.md`) surfaced five ISO/IEC standards the deck referenced that this repo
 didn't yet cover. None of them are AI-specific standards. They're general-purpose governance,
 compliance, security, and privacy management standards that AI governance programs commonly
