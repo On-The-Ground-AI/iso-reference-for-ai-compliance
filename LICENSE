@@ -1,0 +1,10 @@
+This repository uses two licenses for two different kinds of content. See
+README_ISO_reference_pack.md ("License" section) for the full explanation and scope,
+including what is explicitly NOT covered (third-party articles, ISO/IEC standard text,
+and Straits Interactive / SMU Academy course material — none of the latter is reproduced here).
+
+- OTG's original writing (02_Practitioner_guides/, README_ISO_reference_pack.md):
+  Creative Commons Attribution 4.0 International (CC BY 4.0)
+  https://creativecommons.org/licenses/by/4.0/
+
+- The site/ application code: MIT License, see site/LICENSE.

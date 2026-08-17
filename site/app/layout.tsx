@@ -20,8 +20,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav>
               <Link href="/">Guides</Link>
               <Link href="/standards">Standard Previews</Link>
-              <Link href="/deck-index">Deck Cross-Reference</Link>
               <Link href="/methodology">Methodology</Link>
+              <a
+                href="https://github.com/On-The-Ground-AI/iso-reference-for-ai-compliance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
             </nav>
           </div>
         </header>
@@ -39,7 +45,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </a>
               -led SMU Academy course. Every summary is original wording with a source citation
               — see the <Link href="/methodology">methodology</Link> page for how this pack is
-              sourced and why.
+              sourced and why. Source on{" "}
+              <a
+                href="https://github.com/On-The-Ground-AI/iso-reference-for-ai-compliance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              .
             </p>
           </div>
         </footer>

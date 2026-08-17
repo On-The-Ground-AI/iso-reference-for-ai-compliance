@@ -99,10 +99,6 @@ export function getMarkdownFile(absPath: string): string {
   return marked.parse(raw, { async: false }) as string;
 }
 
-export function getSmuIndexHtml(): string {
-  return getMarkdownFile(path.join(REPO_ROOT, "03_SMU_Deck_ISO_Index.md"));
-}
-
 export function getReadmeHtml(): string {
   return getMarkdownFile(path.join(REPO_ROOT, "README_ISO_reference_pack.md"));
 }

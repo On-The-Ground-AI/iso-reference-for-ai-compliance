@@ -4,6 +4,8 @@ A free-to-read reference pack on the ISO/IEC standards most relevant to building
 AI systems responsibly — AI risk management, AI management systems, AI system life cycle,
 data life cycle, and related standards.
 
+**🔗 Live site:** [iso-reference-for-ai-compliance.vercel.app](https://iso-reference-for-ai-compliance.vercel.app/) — the easiest way to browse this pack. Everything below is also readable directly as markdown in this repo.
+
 **Context and credit:** This pack was compiled to accompany *App Design in Legal*, an SMU
 Academy course conducted by trainers from [Straits Interactive](https://www.straitsinteractive.com).
 The course itself — its scope, structure, and choice of standards — originates from Straits
@@ -31,10 +33,13 @@ Two rules shape every file in here:
 This pack's coverage was cross-checked against a private training deck for that
 [Straits Interactive](https://www.straitsinteractive.com)-led SMU Academy course on AI
 application design, which is course material restricted to its participants and carries an
-explicit no-reproduction notice. **No text, slide content, or images from that deck appear
-anywhere in this repo.** The only thing derived from it is `03_SMU_Deck_ISO_Index.md`, a
-factual index of *which* standard numbers and generic template types the deck references —
-standard names aren't copyrightable expression, and no slide wording is quoted.
+explicit no-reproduction notice. **No text, slide content, images, or named tools/templates
+from that deck appear anywhere in this repo.** An earlier draft of this pack included a
+page-by-page cross-reference index derived from the deck; it was removed after review because,
+even though it avoided quoting slide text, it named several tools specific to the course's own
+platform — which risked exposing more about the deck's proprietary structure than intended. The
+standards it surfaced as gaps (see `RELATED_STANDARDS_briefly.md`) were kept, since standard
+numbers aren't copyrightable or confidential; the index itself was not.
 
 ---
 
@@ -45,7 +50,8 @@ iso-reference-for-ai-compliance/
 ├── README_ISO_reference_pack.md          ← this file
 ├── 01_ISO_sample_PDFs/                   ← official ISO preview PDFs (6)
 ├── 02_Practitioner_guides/               ← original OTG summaries of free third-party explainers, plus OTG's own research (18)
-└── 03_SMU_Deck_ISO_Index.md              ← factual cross-reference index (see note above)
+├── site/                                 ← the Next.js app behind the live site (see below)
+└── vercel.json                           ← deploy config (builds site/ from the repo root)
 ```
 
 ### 01_ISO_sample_PDFs — the closest thing to the real text
@@ -124,13 +130,41 @@ source article. Files note where claims from the underlying source couldn't be v
 
 Unlike the files above, these two aren't rewrites of a single third-party explainer — they're
 OTG-authored brief profiles compiled from multiple public sources, added after cross-referencing
-against the [Straits Interactive](https://www.straitsinteractive.com) SMU Academy course deck
-(indexed in `03_SMU_Deck_ISO_Index.md`), which surfaced gaps in this pack's coverage.
+against the [Straits Interactive](https://www.straitsinteractive.com) SMU Academy course deck,
+which surfaced gaps in this pack's coverage.
 
 | File | Why it's useful |
 |---|---|
 | `RELATED_STANDARDS_briefly.md` | Brief profiles of five standards the deck referenced that this pack didn't yet cover: ISO/IEC 38505-1/-2 (data governance accountability map), ISO 37301 (compliance management systems), ISO/IEC 27001 (information security), ISO/IEC 27701 (privacy information management), and ISO/IEC 29100 (privacy framework). Honest about which are AI-specific (none are) versus general standards AI governance programs commonly reuse. Also includes a separately-verified note on ISO/IEC TR 24030's use-case template (it follows the IEC 62559-2 methodology, itself paywalled — no freely public template beyond that could be confirmed) |
 | `TEMPLATE_model-cards.md` | Traces the "Model Card" AI documentation concept to Mitchell et al.'s 2019 paper (Google, freely available on arXiv) and confirms two genuinely free, actively maintained templates implementing it (Google's Model Card Toolkit, Hugging Face's model card format). Notes which AI standards touch on the same documentation/transparency concern (ISO/IEC 12792, and third-party commentary on ISO/IEC 42001 Clause 7.5) without overclaiming that any standard mandates the specific "model card" artifact by name |
+
+---
+
+## The site — `site/`
+
+The live site is a fully static [Next.js](https://nextjs.org/) app (`output: "export"`) that
+reads directly from `02_Practitioner_guides/`, `01_ISO_sample_PDFs/`, and this README at build
+time — there's no separate content store to keep in sync, and no database. That was a deliberate minimalism choice: this is a reference pack, not an application
+with user data, so a database would add cost and complexity for nothing. The build produces
+plain HTML/CSS/JS served from Vercel's CDN, with zero serverless functions.
+
+**Run it locally:**
+
+```bash
+cd site
+npm install
+npm run dev      # http://localhost:3000
+```
+
+**Build and deploy:** `vercel.json` at the repo root runs `cd site && npm install && npm run
+build` and serves `site/out`, so the whole repo (not just `site/`) needs to be present for the
+build to find its content directories via `../`. Deploying with the Vercel CLI must be done from
+the repo root, not from inside `site/`:
+
+```bash
+vercel deploy         # preview
+vercel deploy --prod  # production
+```
 
 ---
 
@@ -147,13 +181,12 @@ Both block automated retrieval. Open them in a browser:
 
 ## Standards referenced in the Straits Interactive course deck
 
-See `03_SMU_Deck_ISO_Index.md` for the full, properly-caveated factual index (standard numbers
-and neutral topic labels only — no slide text reproduced). It originally flagged five standards
-the deck referenced that this pack didn't yet cover in depth: ISO/IEC 38505-1/-2 (data
-governance accountability), ISO 37301 (compliance management), ISO/IEC 27001 (information
-security), ISO/IEC 27701 (privacy information management), and ISO/IEC 29100 (privacy
-framework). Brief, OTG-authored profiles of all five — plus a follow-up check on the deck's
-Model Card and ISO/IEC TR 24030 use-case-template mentions — now live in
+A cross-reference pass against the course deck (see the note above on why the index itself was
+removed) flagged five standards the deck referenced that this pack didn't yet cover in depth:
+ISO/IEC 38505-1/-2 (data governance accountability), ISO 37301 (compliance management), ISO/IEC
+27001 (information security), ISO/IEC 27701 (privacy information management), and ISO/IEC 29100
+(privacy framework). Brief, OTG-authored profiles of all five — plus a follow-up check on the
+deck's Model Card and ISO/IEC TR 24030 use-case-template mentions — now live in
 `RELATED_STANDARDS_briefly.md` and `TEMPLATE_model-cards.md` (see above).
 
 ---
@@ -171,3 +204,23 @@ For current pricing and purchase, check the standard's listing directly at
 [iso.org](https://www.iso.org/standards.html) or your national standards body (e.g. Singapore
 adopts several of these as free-to-view SS ISO/IEC standards, often cheaper than buying direct
 from ISO).
+
+---
+
+## License
+
+OTG's own writing in this repo — the summaries in `02_Practitioner_guides/` and this README —
+is licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse it freely, with attribution
+back to this repo. The `site/` application code is licensed under [MIT](https://opensource.org/license/mit/).
+
+This license covers OTG's original wording only. It does **not** cover, and does not grant any
+rights to:
+- The ISO/IEC standards themselves, or the preview PDFs in `01_ISO_sample_PDFs/` — © ISO/IEC,
+  used here only to the extent ISO/IEC themselves publish them as free previews.
+- The third-party articles each `02_Practitioner_guides/` file summarizes — © their respective
+  authors/organizations, linked via each file's `source_url`.
+- Any Straits Interactive / SMU Academy course material — none is reproduced here (see above).
+
+If anything in this repo is your copyrighted material and you believe it's used here
+inappropriately, open an issue and it will be corrected or removed promptly.
