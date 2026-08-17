@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd site && npm install && npm run build",
+  "outputDirectory": "site/out",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}
