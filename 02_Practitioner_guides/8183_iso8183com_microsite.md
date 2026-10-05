@@ -2,7 +2,8 @@
 title: "ISO/IEC 8183 — AI Data Life Cycle Framework, Explained"
 source_organization: "AI Caramba! Limited (iso8183.com)"
 source_url: "https://iso8183.com/"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "microsite"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © AI Caramba! Limited. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -56,3 +57,12 @@ The site's FAQ section makes several points worth preserving:
 ## What was left out of this summary
 
 This summary omits the site's promotional material: biographical marketing for its affiliated consultancy (AI Caramba!) and its named consultant, a plug for a forthcoming book, and calls to action to purchase advisory services. Those are commercial offers unrelated to the factual content of the standard itself.
+
+## Latest developments (as of 2026-10-05)
+
+- Source site re-fetched 2026-10-05: it now states "last reviewed July 2026". The adoption timeline is unchanged (published 26 July 2023; BS ISO/IEC 8183:2023 on 31 October 2023; EN ISO/IEC 8183:2024 approved by CEN 10 June 2024, with 34 countries obliged to adopt by December 2024; CSA ISO/IEC 8183:2024 in Canada by December 2024; all without modification). It reports no revision of the standard, only a corrigendum dated 30 June 2024 that triggered a renumbering. These are the site's own claims; OTG did not confirm them against BSI, CEN or CSA catalogues, and the ISO page for 8183 returned HTTP 403. The site is affiliated with a consultancy, so treat as secondary.
+- Relationships, status of siblings: ISO/IEC 5259 parts 1-5 are listed as 2024 editions (https://store.sfs.fi/en/isoiec-5259-1-2024); ISO/IEC 42005:2025 was published 2025-05-27 (https://webstore.iec.ch/en/publication/107659); ISO/IEC 5338 life cycle processes remains Edition 1 (December 2023) as far as OTG could find (https://webstore.iec.ch/publication/90754); ISO/IEC/IEEE 12207:2026 is recorded as approved 29 April 2026 (https://bsmd.moic.gov.bh/store/standards/iso:pub:std:IS:90219/ISO-IEC-IEEE%2012207:2026?lang=en).
+- Not verified: any other national adoptions beyond those listed.
+- EU AI Act timing: the Council's press release of 29 June 2026 states high-risk obligations, previously due 2 August 2026, now apply from 2 December 2027 (stand-alone high-risk systems) and 2 August 2028 (high-risk systems embedded in products), under the Digital Omnibus on AI. Source: https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/
+- Harmonised standards: CEN-CENELEC announced EN 18286:2026 (AI quality management system for AI Act purposes, aimed at Article 17) as published on 31 July 2026. Source: https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-30-ai-quality-management/ . A third-party tracker (https://kla.digital/blog/jtc-21-standards-tracker, state as of June 2026) listed risk management, logging and cybersecurity drafts at enquiry stage and others still in drafting, with none yet cited in the Official Journal; OTG did not independently confirm the position as of October 2026. Citation in the Official Journal is what confers a presumption of conformity, so treat all ISO/IEC standards in this repository as voluntary good practice, not a conformity route, unless and until cited.
+- Consistent with the site's FAQ: EN ISO/IEC 8183 appears in no tracker list of harmonised standards cited in the Official Journal, so adopting it gives no presumption of conformity.

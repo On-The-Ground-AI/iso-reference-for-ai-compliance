@@ -2,7 +2,8 @@
 title: "How to Actually Use ISO/IEC 23894 for AI Risk Management"
 source_organization: "Prof. Hernan Huwyler (AI Governance and Risk Management blog)"
 source_url: "https://hernanhuwyler.wordpress.com/2026/03/28/how-to-actually-use-iso-iec-23894-for-ai-risk-management/"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "blog post"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © source_organization. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -124,3 +125,27 @@ ISO/IEC 23894 sits within a wider ecosystem of standards it references or connec
 - **EU AI Act (Regulation 2024/1689)** — makes AI risk management a legal obligation for high-risk systems; ISO/IEC 23894 offers a structured methodology that can support meeting many of its requirements.
 
 Other AI-related ISO/IEC standards worth knowing by topic: management and governance (ISO/IEC 42001 – AI management systems; ISO/IEC 38507; ISO/IEC 42005 – AI system impact assessment; ISO/IEC 42006 – requirements for AIMS certification bodies); foundational frameworks (ISO/IEC 22989; ISO/IEC 23053 – ML systems framework; ISO/IEC 5338 – AI system life-cycle processes; ISO/IEC 5339 – guidance for AI applications); trustworthiness, ethics, and quality (ISO/IEC TR 24028; ISO/IEC TR 24368 – ethical and societal concerns; ISO/IEC 25059 – AI quality model; ISO/IEC 12791 – treatment of unwanted bias in ML; ISO/IEC 12792 – transparency taxonomy; ISO/IEC 42119-2 – AI testing, test data and results; ISO/IEC 4213 – assessment of ML classification performance); and data quality (ISO/IEC 24668 – big data analytics process management; ISO/IEC 5259 series – data quality for analytics and ML).
+
+## Latest developments (as of 2026-10-05)
+
+Source re-check: the Huwyler post (dated 28 March 2026 in its URL) re-fetched on 2026-10-05 with no sign of revision, and with no mention of any amendment to ISO/IEC 23894. It still treats the 2023 edition as current. The summary above stands. https://hernanhuwyler.wordpress.com/2026/03/28/how-to-actually-use-iso-iec-23894-for-ai-risk-management/
+
+Edition status
+- ISO/IEC 23894:2023 remains Edition 1 (6 February 2023, published). No revision project or second edition was found in public sources (unverified absence). https://committee.iso.org/standard/77304.html
+- EN ISO/IEC 23894:2024 was approved by CEN on 12 February 2024 (secondary source). https://www.din.de/en/getting-involved/standards-committees/nia/wdc-beuth:din21:377530454
+
+Updates to the "other standards" list above
+- ISO/IEC 42005:2025 published May 2025: https://committee.iso.org/standard/42005 ; ISO/IEC 42006:2025 published 7 July 2025: https://committee.iso.org/standard/42006?browse=ics
+- ISO/IEC 12792:2025 (transparency taxonomy) is Edition 1, published November 2025, 45 pages: https://committee.iso.org/standard/84111.html
+- ISO/IEC 25059:2023 was published 28 June 2023 and is under revision; the ISO page shows it flagged for revision, and public listings show a second-edition DIS with an enquiry from 26 December 2025 to 22 February 2026. Final publication of edition 2 was not found. https://committee.iso.org/standard/80655.html and https://projektai.lsd.lt/en/drafts/software-engineering-systems-and-software-quality-requirements-and-evaluation-square-quality-models-for-ai-systems-iso-iec-dis-25059-2025
+- ISO/IEC TS 42119-2:2025 (overview of testing AI systems) is listed as published in 2025 by catalogue sites; the ISO page was not fetchable. https://www.iso.org/standard/84127.html
+- ISO/IEC TR 29119-11 is still the 2020 first edition (published 27 November 2020); no newer edition found. https://www.iso.org/standard/79016.html (catalogue details via https://iss.rs/en/project/show/iso:proj:79016)
+
+EU AI Act and harmonised standards
+- Digital Omnibus provisional agreement of 7 May 2026: high-risk obligations move to 2 December 2027 (stand-alone) and 2 August 2028 (embedded in products). https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens
+- Reported as Regulation (EU) 2026/1744, OJ 24 July 2026, in force 27 July 2026 (secondary; not confirmed on EUR-Lex). https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force
+- prEN 18228 (AI risk management, supporting Article 9) was in public enquiry to end of July 2026 per CEN-CENELEC: https://www.cencenelec.eu/news-events/news/2026/newsletter/ots-73-etuc/ . Secondary reporting says it was rejected at enquiry and goes to comment resolution in November 2026 (https://krogrules.com/news); a DIN listing shows a 2026-10 edition with an enquiry to 11 November 2026 (https://www.din.de/en/wdc-beuth:din21:405977950). Status after these is unverified.
+- As of an April 2026 analysis, no JTC 21 harmonised standard had been cited in the Official Journal, with citation judged realistic no earlier than Q1 2027 (secondary). https://consulting.tuv.com/aktuelles/ki-im-fokus/harmonisierte-normen-ai-act
+
+NIST
+- AI RMF 1.0 (26 January 2023) is under revision following the White House AI Action Plan; the Generative AI Profile (NIST AI 600-1) dates from 26 July 2024; a concept note for a critical-infrastructure profile was released 7 April 2026. https://www.nist.gov/itl/ai-risk-management-framework

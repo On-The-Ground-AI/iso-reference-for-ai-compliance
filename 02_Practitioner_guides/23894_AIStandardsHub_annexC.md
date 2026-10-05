@@ -2,7 +2,8 @@
 title: "ISO/IEC 23894 – A new standard for risk management of AI"
 source_organization: "AI Standards Hub (The Alan Turing Institute); author Tim McGarr, Sector Lead (Digital), BSI"
 source_url: "https://aistandardshub.org/a-new-standard-for-ai-risk-management"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "blog post"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © source_organization. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -26,3 +27,21 @@ AI systems are more complex than most other technologies an organization deploys
 ## Annex C: mapping risk management to the AI life cycle
 
 The article singles out Annex C as the standard's most practically important contribution. Annex C provides a functional mapping between risk management processes and the stages of the AI system life cycle (using the life-cycle model defined in ISO/IEC 22989). It lays out both "vertical" and "horizontal" pathways — that is, how risk management principles, frameworks, and processes connect to each life-cycle stage, and how they connect to each other — in a way that can be adapted to any organization's circumstances. The article treats Annex C as the primary practical tool the standard offers for actually operationalizing AI risk management, rather than the principles or process clauses considered in isolation.
+
+## Latest developments (as of 2026-10-05)
+
+Source re-check: on 2026-10-05 the `source_url` returned HTTP 404 on two fetch attempts (with and without a trailing slash), although a web search still indexes the article. Its content could not be re-verified today; the summary above reflects the 2026-08-17 retrieval. Treat the link as possibly moved.
+
+Edition status of 23894
+- ISO/IEC 23894:2023 is Edition 1, published 6 February 2023, and shows as published (stage 60.60). No second edition or amendment was found in public sources; absence of evidence is not proof, so check the SC 42 catalogue for live stage codes. https://committee.iso.org/standard/77304.html
+- CEN adopted it as EN ISO/IEC 23894:2024, approved 12 February 2024 (secondary source: a DIN catalogue entry surfaced by search; not checked against CEN directly). https://www.din.de/en/getting-involved/standards-committees/nia/wdc-beuth:din21:377530454
+
+EU AI Act context (Article 9 risk management)
+- On 7 May 2026 the Council and Parliament reached a provisional agreement on the Digital Omnibus changes to the AI Act, setting new application dates of 2 December 2027 (stand-alone high-risk systems) and 2 August 2028 (high-risk AI embedded in regulated products). https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens and https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/
+- Law-firm reporting states the Omnibus was published as Regulation (EU) 2026/1744 on 24 July 2026 and entered into force on 27 July 2026. This was not confirmed on EUR-Lex today (secondary source). https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force
+- The European draft standard written to support Article 9 is prEN 18228 (AI risk management), from CEN-CENELEC JTC 21. CEN-CENELEC confirmed a public enquiry running to the end of July 2026. https://www.cencenelec.eu/news-events/news/2026/newsletter/ots-73-etuc/ Secondary newsletter reporting says the enquiry closed 30 July 2026 and the draft was rejected by a majority of national bodies, with comment resolution planned for early November 2026 (https://krogrules.com/news). A DIN listing separately shows a prEN 18228:2026 edition dated 2026-10, with an enquiry closing 11 November 2026 (https://www.din.de/en/wdc-beuth:din21:405977950); how these two reports fit together is unverified. Either way it is a draft and gives no presumption of conformity yet.
+- Whether Annex C of ISO/IEC 23894 is referenced by prEN 18228 is unverified.
+
+Related SC 42 publications
+- ISO/IEC 42005:2025 (AI system impact assessment), published May 2025: https://committee.iso.org/standard/42005
+- ISO/IEC 42006:2025 (requirements for bodies certifying AI management systems), published 7 July 2025: https://committee.iso.org/standard/42006?browse=ics

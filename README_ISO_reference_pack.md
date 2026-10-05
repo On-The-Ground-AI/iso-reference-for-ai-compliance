@@ -6,6 +6,8 @@ data life cycle, and related standards.
 
 **🔗 Live site:** [iso-reference-for-ai-compliance.vercel.app](https://iso-reference-for-ai-compliance.vercel.app/) — the easiest way to browse this pack. Everything below is also readable directly as markdown in this repo.
 
+**Last reviewed:** 2026-10-05 — every guide was re-checked against its source and current standards/regulatory developments; see the "Latest developments" section in each file.
+
 **Context and credit:** This pack was compiled to accompany *App Design in Legal*, an SMU
 Academy course conducted by trainers from [Straits Interactive](https://www.straitsinteractive.com).
 The course itself — its scope, structure, and choice of standards — originates from Straits

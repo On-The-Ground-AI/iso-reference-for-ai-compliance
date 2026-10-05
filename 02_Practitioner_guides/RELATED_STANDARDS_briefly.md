@@ -1,27 +1,30 @@
 # Related standards, briefly
 
+Last reviewed: 2026-10-05
+
 Unlike the other files in `02_Practitioner_guides/`, this file is not a rewrite of a single
 third-party explainer. It is **OTG's own original research**, compiled by searching public
 sources for each standard (ISO/IEC's own standard-listing pages, national standards bodies,
 and, where useful, secondary write-ups) and then writing an independent summary — not quoting
 or paraphrasing any one source at length. Per-standard source lists are given in each section.
 
-**Why these five are here:** a cross-reference pass of the private training deck for the
-[Straits Interactive](https://www.straitsinteractive.com)-led SMU Academy course surfaced five
-ISO/IEC standards the deck referenced that this repo didn't yet cover. None of them are
-AI-specific standards. They're general-purpose governance,
-compliance, security, and privacy management standards that AI governance programs commonly
-reuse or plug into — which is exactly why a deck about applying AI standards would cite them
-alongside the AI-specific ones (ISO/IEC 42001, 5338, 23894, etc.) that get fuller treatment
-elsewhere in this repo. Where a standard is only tangentially related to AI, that's said plainly
-below rather than stretched into an AI-standard framing it doesn't deserve.
+**Why these are here:** they were identified as coverage gaps when cross-referencing this pack
+against the [Straits Interactive](https://www.straitsinteractive.com)-led SMU Academy course
+that it accompanies. None of them are AI-specific standards. They are general-purpose
+governance, compliance, security, and privacy management standards that AI governance programs
+commonly reuse or plug into, alongside the AI-specific ones (ISO/IEC 42001, 5338, 23894, etc.)
+that get fuller treatment elsewhere in this repo. Where a standard is only tangentially related
+to AI, that's said plainly below rather than stretched into an AI-standard framing it doesn't
+deserve.
 
 No claims below about page counts or clause-level detail are made unless they could be verified
 via a public search result; where verification wasn't possible, that's noted rather than guessed.
 
 ---
 
-## ISO/IEC 38505-1:2017 — Governance of data, Part 1
+## ISO/IEC 38505-1 — Governance of data, Part 1 (2017 edition superseded by 2026 second edition)
+
+**Status update (2026-10-05):** a second edition, ISO/IEC 38505-1:2026, was published on 2026-08-20 and replaces the 2017 edition, which ISO lists as withdrawn (source: https://committee.iso.org/standard/87195.html). The scope text below describes the 2017 edition; the 2026 edition keeps the same stated purpose (applying ISO/IEC 38500 to data governance), but its changes in detail are not reviewed here.
 
 **Title:** *Information technology — Governance of IT — Governance of data — Part 1:
 Application of ISO/IEC 38500 to the governance of data*
@@ -37,11 +40,10 @@ decisions.
 
 **Relevance to AI compliance:** Directly relevant. AI systems are trained and run on data, and
 a governing body that has never had to formally direct or evaluate data governance will
-struggle to do the same for AI governance. The training deck that prompted this entry cited
-38505 specifically for its "Accountability Map" concept in the context of data governance
-accountability — a natural companion to AI-specific governance standards like ISO/IEC 42001.
+struggle to do the same for AI governance. The standard's "data accountability map" concept is a natural companion to AI-specific
+governance standards like ISO/IEC 42001.
 
-**Official listing:** https://www.iso.org/standard/56639.html
+**Official listing:** https://www.iso.org/standard/87195.html (2026 edition; the 2017 edition page is https://www.iso.org/standard/56639.html)
 
 **Sources drawn on:** ISO's own standard page (iso.org/standard/56639.html); ANSI's standards
 store listing; Nemko's public explainer of the 38505 family.
@@ -66,6 +68,8 @@ the piece that helps translate board-level data governance intent into something
 actually measure and report back on, which matters once "data" in that accountability map
 includes the training and inference data feeding AI systems.
 
+**Status update (2026-10-05):** ISO lists this report as confirmed in 2023 (stage 90.93), still current, with no revision shown (https://committee.iso.org/standard/70911.html). Note it was written against Part 1:2017, so check alignment with the 2026 Part 1 edition before relying on it.
+
 **Official listing:** https://www.iso.org/standard/70911.html
 
 **Sources drawn on:** ISO's own standard page (iso.org/standard/70911.html); Pacific Cert's
@@ -83,15 +87,16 @@ It's a certifiable management-system standard, applicable to any organization re
 type, size, or sector, and follows ISO's common high-level structure (the same skeleton used
 by ISO 9001, ISO/IEC 27001, and ISO/IEC 42001, among others). It replaced the earlier
 non-certifiable guidance document ISO 19600:2014. An amendment covering climate-action wording
-was published in 2024.
+(ISO 37301:2021/Amd 1:2024) was published in 2024. ISO lists the standard as confirmed on
+2026-08-03 after systematic review, so the 2021 edition stays current (stage 90.93;
+https://committee.iso.org/standard/75080.html).
 
 **Relevance to AI compliance:** Tangential rather than AI-specific — this is a general-purpose
 compliance management system standard, not an AI standard. Its relevance to AI governance work
 is structural: organizations that already run a certified CMS under ISO 37301 have an existing
 policy, risk-assessment, and monitoring structure they can extend to cover AI-specific legal and
 regulatory obligations (e.g. under the EU AI Act or similar), rather than building an AI
-compliance function from scratch. The training deck referenced it in that governance-framework
-sense.
+compliance function from scratch. 
 
 **Official listing:** https://www.iso.org/standard/75080.html
 
@@ -110,7 +115,9 @@ establishing, implementing, maintaining, and continually improving an informatio
 management system (ISMS), including requirements for assessing and treating information
 security risk. This is the third edition (2022), replacing the 2013 edition; Annex A lists 93
 security controls grouped into four themes (organizational, people, physical, technological). An
-amendment covering climate-action wording was published in 2024.
+amendment, ISO/IEC 27001:2022/Amd 1:2024 ("Climate action changes"), was published in 2024. ISO shows the
+standard at systematic-review stage (90.20) as of 2026-10-05, with no new edition announced there
+(https://committee.iso.org/standard/27001).
 
 **Relevance to AI compliance:** Tangential — 27001 is a general information-security standard,
 not an AI-specific one. But it's highly relevant in practice: AI systems are IT systems, and
@@ -127,30 +134,17 @@ iso.org/obp/ui/en/#!iso:std:82875:en); the ANSI Blog's public explainer of the 2
 
 ---
 
-## ISO/IEC 27701:2019 — Privacy information management systems
+## ISO/IEC 27701:2025 — Privacy information management systems (replaces the 2019 extension)
 
-**Title:** *Security techniques — Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy
-information management — Requirements and guidelines*
+**Status update (2026-10-05):** a revised second edition, ISO/IEC 27701:2025, was published on 14 October 2025 and ISO lists the 2019 edition as withdrawn (https://committee.iso.org/standard/27701). It is now a **standalone** privacy information management system (PIMS) standard rather than an extension of ISO/IEC 27001 and 27002, with the new title *Information security, cybersecurity and privacy protection — Privacy information management systems — Requirements and guidance*. Secondary sources report a transition period for 2019-certified organisations ending 31 October 2028 (https://www.cottgroup.com/en/blog/kvkk-gdpr/item/transition-to-the-iso-iec-27701-2025-revision-deadline-and-key-changes); this was not confirmed from an accreditation-body document (the UKAS transition form could not be fetched), so check with your certification body.
 
-**Scope:** Not a standalone standard — it's explicitly an extension that adds privacy-specific
-requirements and guidance on top of an existing ISO/IEC 27001 ISMS (and draws on the ISO/IEC
-27002 control guidance), turning it into a Privacy Information Management System (PIMS). It's
-written for both PII controllers and PII processors, of any size or sector, who are processing
-personally identifiable information within an ISMS, and gives them a structured way to manage
-privacy obligations that also supports (without directly certifying) compliance with regulations
-like the GDPR.
+**Scope:** It specifies requirements, with implementation guidance, for establishing, implementing, maintaining, and continually improving a PIMS. It is written for PII controllers and PII processors of any size or sector, and supports (without directly certifying) compliance with privacy law such as the GDPR. The 2019 edition, by contrast, was explicitly an add-on that required an existing ISO/IEC 27001 ISMS.
 
-**Relevance to AI compliance:** Tangential rather than AI-specific — a general privacy
-management-system standard. Its relevance to AI governance is that most AI systems process
-personal data somewhere in their training or inference pipeline, so an organization extending
-its 27001 ISMS to 27701 gets a structured way to manage AI-related privacy obligations
-(consent tracking, data subject rights, cross-border transfer controls) without building a
-parallel privacy program specifically for AI.
+**Relevance to AI compliance:** Tangential rather than AI-specific. Most AI systems process personal data somewhere in training or inference, so a PIMS gives a structured way to manage AI-related privacy obligations (consent tracking, data subject rights, cross-border transfer controls) without a parallel privacy program. The standalone status means an organisation can now pursue it without holding 27001 first; whether a particular certification body still expects one is unverified.
 
-**Official listing:** https://www.iso.org/standard/71670.html
+**Official listing:** https://www.iso.org/standard/71670.html is the withdrawn 2019 edition; the 2025 edition is listed at https://committee.iso.org/standard/27701
 
-**Sources drawn on:** ISO's own standard page (iso.org/standard/71670.html); Microsoft Learn's
-and Q-Cert's public explainers of the standard's scope and applicability.
+**Sources drawn on:** ISO's committee page for the 2025 edition; Kiwa's public announcement (https://www.kiwa.com/en/nl/about-kiwa/news/isoiec-277012025-published-updated-privacy-standard-offers-organizations-more-guidance); Cott Group's transition explainer; AFNOR's catalogue listing (64 pages).
 
 ---
 
@@ -158,7 +152,7 @@ and Q-Cert's public explainers of the standard's scope and applicability.
 
 **Title:** *Information technology — Security techniques — Privacy framework* (first edition
 2011, amended 2018; **a second edition, ISO/IEC 29100:2024, has since been published and
-incorporates the 2018 amendment** — treat 2024 as the current edition)
+incorporates the 2018 amendment** — treat 2024 as the current edition; ISO lists the 2011 edition and 2018 amendment as withdrawn, with the 2024 edition published February 2024, 22 pages — https://committee.iso.org/standard/85938.html)
 
 **Scope:** A foundational, terminology-and-principles-level standard rather than a
 certifiable management-system standard. It establishes common privacy terminology, defines the
@@ -197,10 +191,8 @@ and is explicit about what could **not** be verified.
 the **IEC 62559-2** "use case methodology" — a standard that defines a template for use cases,
 plus companion template lists for actors and requirements, originally developed for smart-grid
 work but written for general application across domains. TR 24030 was reissued as a second
-edition in 2021 and a further edition in 2024 (with a third edition reportedly in development as
-of this research), each edition adding more submitted use cases (132 in the edition examined via
-public search results, with a note that the total across the 2024 edition's electronic
-attachment ran into the hundreds of pages).
+edition in 2021 and a further edition in 2024 (a third edition is in development, see below), each edition adding more submitted use cases (132 in the edition examined via
+public search results).
 
 **What was checked and could not be verified as public:** IEC 62559-2 — the standard that
 actually defines the use-case template's fields — is itself a paywalled IEC standard (see
@@ -220,3 +212,19 @@ IEC 62559-2 (webstore.iec.ch/publication/22349); ISO's document-attachment porta
 24030 edition 1, fetched directly to confirm it is a licensed-download portal rather than an
 open repository; JTC 1's own public SC 42 committee materials describing the use-case
 collection process.
+
+**Update (2026-10-05):** ISO now lists an Edition 3 as ISO/IEC CD TR 24030 (project approved 2025-04-15; committee-draft consultation registered 2026-07-30/31, stage 30.20), which will replace the 2024 edition once published. Earlier search snippets showing a 2026-01-31 target date are superseded; no publication date is confirmed. Source: https://committee.iso.org/standard/91832.html. The 2024 edition remains the current published one.
+
+---
+
+## Latest developments (as of 2026-10-05)
+
+- **ISO/IEC 38505-1:2026** published 2026-08-20, replacing the 2017 edition (withdrawn); 20 pages. https://committee.iso.org/standard/87195.html
+- **ISO/IEC TR 38505-2:2018** confirmed in 2023, still current, no revision shown. https://committee.iso.org/standard/70911.html
+- **ISO 37301:2021** confirmed 2026-08-03 after systematic review; Amd 1:2024 (climate action) is its only amendment. https://committee.iso.org/standard/75080.html
+- **ISO/IEC 27001:2022** current, with Amd 1:2024 (climate action); under systematic review (stage 90.20). https://committee.iso.org/standard/27001
+- **ISO/IEC 27701:2025** published 2025-10-14, standalone, withdrawing the 2019 edition. https://committee.iso.org/standard/27701
+- **ISO/IEC 29100:2024** is current (published Feb 2024); 2011 edition and 2018 amendment withdrawn. https://committee.iso.org/standard/85938.html
+- **ISO/IEC TR 24030** Edition 3 at committee-draft stage since July 2026; 2024 edition still current. https://committee.iso.org/standard/91832.html
+
+Unverified: clause-level differences between the 2017 and 2026 editions of 38505-1 and between the 2019 and 2025 editions of 27701 (standards are paywalled and were not read); accreditation-body transition rules for 27701.

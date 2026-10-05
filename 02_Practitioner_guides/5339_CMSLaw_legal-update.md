@@ -2,7 +2,8 @@
 title: "New International Standard for AI Application, Development and Use (ISO/IEC 5339:2024)"
 source_organization: "CMS (law firm)"
 source_url: "https://cms.law/en/gbr/legal-updates/new-international-standard-for-ai-application-development-and-use-iso-iec-5339-2024"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "legal update"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © CMS. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -42,3 +43,12 @@ Removed: CMS's cookie-consent banner text, firm navigation, "sign up for updates
 ## Verification note
 
 WebFetch of the live source URL succeeded and confirmed the article's title, publish date (12 June 2024), and the acknowledgement of Tycho Orton's contribution, matching the scraped copy. The specific clause numbering (e.g., "Clause 7" for the guidance section) is as stated in the article and was not independently verified against the ISO/IEC 5339 standard text, which is paywalled.
+
+## Latest developments (as of 2026-10-05)
+
+- Source page re-fetched 2026-10-05: still dated 12 June 2024, now showing a "last updated" date of 24 September 2026. OTG could not tell what changed; the generative AI statement (standard does not specifically address it, but its framework is technology-agnostic) is still present in the same terms.
+- Status of ISO/IEC 5339:2024 (Edition 1, published January 2024 per search listing): no revision or generative-AI amendment was found on 2026-10-05; ISO's page (https://www.iso.org/standard/81120.html) returned HTTP 403, so status was not confirmed first-hand. Secondary listing: https://standards.iteh.ai/catalog/standards/iso/41c71023-1874-489e-b6a9-edc4e3995b71/iso-iec-5339-2024
+- SC 42 generative/general-purpose AI standards: a third-party overview mentions discussion of new work ahead of an SC 42 plenary planned for Singapore in April 2026 (https://www.safer-ai.org/an-overview-of-existing-and-potential-future-genai-gpai-standards); outcomes were not verified.
+- ISO/IEC 42005:2025 (impact assessment) was published 2025-05-27 (https://webstore.iec.ch/en/publication/107659); CMS has its own note on it: https://cms.law/en/gbr/legal-updates/iso-iec-42005-2025-a-new-blueprint-for-legal-and-commercial-leaders-navigating-ai-risk-and-governance
+- EU AI Act timing: the Council's press release of 29 June 2026 states high-risk obligations, previously due 2 August 2026, now apply from 2 December 2027 (stand-alone high-risk systems) and 2 August 2028 (high-risk systems embedded in products), under the Digital Omnibus on AI. Source: https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/
+- Harmonised standards: CEN-CENELEC announced EN 18286:2026 (AI quality management system for AI Act purposes, aimed at Article 17) as published on 31 July 2026. Source: https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-30-ai-quality-management/ . A third-party tracker (https://kla.digital/blog/jtc-21-standards-tracker, state as of June 2026) listed risk management, logging and cybersecurity drafts at enquiry stage and others still in drafting, with none yet cited in the Official Journal; OTG did not independently confirm the position as of October 2026. Citation in the Official Journal is what confers a presumption of conformity, so treat all ISO/IEC standards in this repository as voluntary good practice, not a conformity route, unless and until cited.

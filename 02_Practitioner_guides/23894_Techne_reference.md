@@ -2,7 +2,8 @@
 title: "ISO/IEC 23894 AI Risk Management Guidance: A Reference for Boards and Compliance Teams"
 source_organization: "Khullani M. Abdullahi, JD / Techné AI"
 source_url: "https://techne.ai/insights/iso-iec-23894-reference/"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "practitioner guide"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © source_organization. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -44,7 +45,7 @@ The article positions three documents as the current international AI-governance
 
 ## How the article ties this to specific regulatory regimes
 
-- **EU AI Act, Article 9.** Requires providers of high-risk AI systems to establish, implement, document, and maintain a risk-management system across the system's life cycle, specifying the required components (identification, estimation, evaluation, post-market monitoring, and mitigation measures) without prescribing a specific methodology — which is the gap the article says ISO/IEC 23894 is commonly used to fill. The article also notes the EU's Digital Omnibus deferral pushed the compliance deadline for high-risk-system obligations to December 2, 2027, and that once the AI Act's harmonized standards (several of which are expected to reference ISO/IEC 23894) are formally adopted, conformity with them would create a presumption of conformity with Article 9 — but that citing ISO/IEC 23894 today is a defensible reference, not yet a safe harbor.
+- **EU AI Act, Article 9.** Requires providers of high-risk AI systems to establish, implement, document, and maintain a risk-management system across the system's life cycle, specifying the required components (identification, estimation, evaluation, post-market monitoring, and mitigation measures) without prescribing a specific methodology — which is the gap the article says ISO/IEC 23894 is commonly used to fill. The article also notes the EU's Digital Omnibus deferral pushed the compliance deadline for high-risk-system obligations to December 2, 2027, and that once the AI Act's harmonized standards (several of which are expected to reference ISO/IEC 23894) are formally adopted, conformity with them would create a presumption of conformity with Article 9 — but that citing ISO/IEC 23894 today is a defensible reference, not yet a safe harbor. [OTG update 2026-10-05: the draft harmonised standard for Article 9 is prEN 18228, which is still a draft with no presumption of conformity; whether it references ISO/IEC 23894 is unverified. See the latest-developments section below.]
 - **New York RAISE Act.** Requires large frontier-model developers to publish a safety and security protocol addressing critical-harm risk, again without prescribing the underlying risk-assessment method; the article describes ISO/IEC 23894, used alongside ISO/IEC 42001 and NIST AI RMF, as a common methodological basis for building that protocol, ahead of the Act's January 1, 2027 effective date.
 - **State impact-assessment regimes.** The article notes this area moved quickly: the original 2024 Colorado AI Act's algorithmic impact-assessment obligation was repealed in May 2026 before it took effect, and Colorado's replacement (SB 26-189) requires disclosures rather than formal assessments. Where an assessment obligation does apply elsewhere (e.g., CCPA-style risk assessments for automated decision-making, or EU AI Act documentation), the article's point is that the underlying methodology — not the specific statute — is what persists, and ISO/IEC 23894 is offered as a defensible basis for that methodology regardless of which particular law is in force at a given time.
 - **NYC Local Law 144.** Requires bias audits of automated employment decision tools; the audit methodology itself is set by NYC rules, but the article notes the broader risk-management process around the audited tool is left to the deployer, which is where it sees ISO/IEC 23894's data-quality, bias, and monitoring content being used.
@@ -67,3 +68,23 @@ The article observes that ISO/IEC 23894 was finalized shortly after the public r
 ## Suggested citation
 
 Abdullahi, Khullani M. "ISO/IEC 23894 AI Risk Management Guidance: A Reference for Boards and Compliance Teams." Techné AI, May 12, 2026. https://techne.ai/insights/iso-iec-23894-reference
+
+## Latest developments (as of 2026-10-05)
+
+Source re-check (important): the live page at the source_url is now titled "ISO/IEC 23894: Applying AI Risk Management Guidance" and shows "Last Updated: September 6, 2026". Its current outline is organised around: defining the decision and context; describing a risk as an event plus consequence; connecting evidence to a response; a fictional worked example; how 23894 differs from 42001; and keeping the record current. The re-fetch found no mention of the EU AI Act, NIST AI RMF or Annex C. The summary above was written from the earlier version (cited as 12 May 2026) and some of its regulatory material (EU AI Act, NIST, state laws) may have been dropped or rewritten in the update. Read the live page before relying on those parts. The 23894-versus-42001 point (guidance versus certifiable requirements) is still present. https://techne.ai/insights/iso-iec-23894-reference/
+
+Edition status
+- ISO/IEC 23894:2023 is Edition 1, published 6 February 2023; no second edition or amendment found (unverified absence). https://committee.iso.org/standard/77304.html
+- CEN approved it as EN ISO/IEC 23894:2024 on 12 February 2024 (secondary). https://www.din.de/en/getting-involved/standards-committees/nia/wdc-beuth:din21:377530454
+
+EU AI Act
+- Digital Omnibus provisional deal (7 May 2026): 2 December 2027 for stand-alone high-risk systems, 2 August 2028 for high-risk AI in regulated products. This matches the December 2027 date cited above, and adds the August 2028 date for the embedded category. https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens
+- Reported publication as Regulation (EU) 2026/1744 on 24 July 2026, in force 27 July 2026 (secondary). https://www.hunton.com/privacy-and-cybersecurity-law-blog/eu-digital-omnibus-on-ai-enters-into-force
+- prEN 18228 (AI risk management, Article 9) was in public enquiry to end of July 2026: https://www.cencenelec.eu/news-events/news/2026/newsletter/ots-73-etuc/ . Secondary newsletter reporting says it was rejected at enquiry, with comment resolution in early November 2026 (https://krogrules.com/news). DIN lists a 2026-10 edition with an enquiry to 11 November 2026 (https://www.din.de/en/wdc-beuth:din21:405977950). The reconciliation of these is unverified.
+
+NIST
+- AI RMF 1.0 is being revised under the White House AI Action Plan; a critical-infrastructure profile concept note appeared 7 April 2026; the Generative AI Profile is NIST AI 600-1 (26 July 2024). https://www.nist.gov/itl/ai-risk-management-framework
+- A preliminary draft Cyber AI Profile (NIST IR 8596) was released 16 December 2025 per secondary reporting; NIST's own page for it was listed in search but not opened. https://csrc.nist.gov/pubs/ir/8596/iprd
+
+Related SC 42 documents
+- ISO/IEC 42005:2025 (impact assessment) published May 2025: https://committee.iso.org/standard/42005 ; ISO/IEC 42006:2025 (certification bodies) published 7 July 2025: https://committee.iso.org/standard/42006?browse=ics

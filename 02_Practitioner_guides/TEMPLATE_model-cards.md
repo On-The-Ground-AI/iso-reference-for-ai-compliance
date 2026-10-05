@@ -1,5 +1,7 @@
 # Model Cards — an AI transparency documentation template
 
+Last reviewed: 2026-10-05
+
 This file is OTG's original research on "Model Cards," written after confirming via public
 search that the concept traces to a real, citable academic paper and that genuinely free, public
 templates implementing it still exist and are actively maintained. It is not a rewrite of any
@@ -89,3 +91,19 @@ standard requires the exact Mitchell et al. template or uses the term "model car
   https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md
 - ISO's own standard page for ISO/IEC 12792:2025 — https://www.iso.org/standard/84111.html
 - AI Standards Hub's public explainer of ISO/IEC 12792 — https://aistandardshub.org/transparency-taxonomy-standard
+
+## Latest developments (as of 2026-10-05)
+
+Template and tooling status
+- Hugging Face Hub's Model Cards documentation is live and now includes a simpler, newer metadata format for evaluation results (alongside the older model-index format), a `buckets` metadata field linking storage buckets, and a note that models created after August 2024 must set `library_name` explicitly rather than rely on auto-detection. The page still points to Mitchell et al. for the contents a card should describe and to the annotated template. https://huggingface.co/docs/hub/model-cards
+- The Hugging Face Model Card Guidebook (2022, Ozoani, Gerchick, Mitchell) remains available and still links the template in `huggingface_hub`, an annotated template, and a card-creator tool. https://huggingface.co/docs/hub/model-card-guidebook
+- Google's Model Card Toolkit: the TensorFlow guide is still online with no deprecation notice, but it shows a last-updated stamp of 3 October 2023 and no newer toolkit release or announcement was found (unverified whether it is actively developed). https://www.tensorflow.org/responsible_ai/model_card_toolkit/guide
+
+Standards and regulation touching AI documentation
+- ISO/IEC 12792:2025 (transparency taxonomy of AI systems) is Edition 1, published November 2025, 45 pages, so the "2025" reference above is confirmed. https://committee.iso.org/standard/84111.html
+- ISO/IEC 42005:2025 (AI system impact assessment, May 2025) includes guidance on documenting impact assessments, a neighbouring practice to model cards. https://committee.iso.org/standard/42005
+- ISO/IEC 42006:2025 (7 July 2025) sets requirements for bodies auditing and certifying ISO/IEC 42001 management systems; it does not by itself make model cards mandatory (not stated in the page summary checked). https://committee.iso.org/standard/42006?browse=ics
+- EU AI Act: the Commission's GPAI Code of Practice, published 10 July 2025, includes a Transparency chapter with a Model Documentation Form (a DOCX) that providers can use to record information for the Act's transparency requirements. It is a regulatory documentation form, not a model card, though the content overlaps. https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
+- The Digital Omnibus provisional agreement of 7 May 2026 sets 2 December 2026 for a shortened grace period on marking AI-generated content and 2 December 2027 / 2 August 2028 for high-risk obligations (as reported by the Council in a search summary; the Commission page confirms the 2027 and 2028 dates). https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/ and https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens
+- No ISO/IEC or CEN-CENELEC standard that names "model cards" in its text was found this review (unverified absence).
+- Also noted: the AI Standards Hub explainer for ISO/IEC 12792 listed under Sources was not re-fetched in this review.

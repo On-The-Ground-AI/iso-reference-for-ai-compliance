@@ -2,7 +2,8 @@
 title: "Embracing Security in AI: Unpacking the New ISO/IEC 5338 Standard"
 source_organization: "Pillar Security"
 source_url: "https://www.pillar.security/blog/embracing-security-in-ai-unpacking-the-new-iso-iec-5338-standard"
-retrieved: 2026-08-17
+retrieved: 2026-10-05
+last_reviewed: 2026-10-05
 content_type: "blog post"
 license_note: "Summary and analysis by On The Ground (OTG). Original article © Pillar Security. This is an original summary, not a reproduction of the source text — see source_url for the complete original."
 ---
@@ -32,3 +33,13 @@ The original article's calls to contact Pillar Security's team, its newsletter s
 ## Verification note
 
 WebFetch of the live source URL succeeded and confirmed the article's title, author (Dor Sarig), and publish date (10 January 2024) as shown in the scraped copy. The characterization of ISO/IEC 5338 as a security standard could not be verified against the ISO standard's own front matter (paywalled) and is treated here as the source's interpretive framing, not a verified fact.
+
+## Latest developments (as of 2026-10-05)
+
+- Source page re-fetched 2026-10-05: title, author (Dor Sarig) and publish date (10 January 2024) unchanged; no revision note seen. The article remains a 2024 piece about the standard as first published.
+- ISO/IEC 5338 itself: it is described as Edition 1 (December 2023), built on ISO/IEC/IEEE 15288 and 12207. No revision of 5338 was found in searches on 2026-10-05; the ISO catalogue page (https://www.iso.org/standard/81118.html) returned HTTP 403 to OTG's fetch tool, so current status was not confirmed first-hand. Secondary listing: https://webstore.iec.ch/publication/90754
+- Software life cycle base standard updated: a national standards-store listing records ISO/IEC/IEEE 12207:2026 (Edition 2) as approved 29 April 2026. Source: https://bsmd.moic.gov.bh/store/standards/iso:pub:std:IS:90219/ISO-IEC-IEEE%2012207:2026?lang=en . Whether and when 5338 will be realigned to it was not found (unverified).
+- Process assessment: ISO/IEC 25704 (process assessment model for AI life cycle processes defined in 5338) is listed as a new project at early drafting stage, not published. Source: https://www.iso.org/standard/91246.html (as shown in search results; page not directly fetchable).
+- EU AI Act timing: the Council's press release of 29 June 2026 states high-risk obligations, previously due 2 August 2026, now apply from 2 December 2027 (stand-alone high-risk systems) and 2 August 2028 (high-risk systems embedded in products), under the Digital Omnibus on AI. Source: https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/
+- Harmonised standards: CEN-CENELEC announced EN 18286:2026 (AI quality management system for AI Act purposes, aimed at Article 17) as published on 31 July 2026. Source: https://www.cencenelec.eu/news-events/news/2026/en-in-the-spotlight/2026-07-30-ai-quality-management/ . A third-party tracker (https://kla.digital/blog/jtc-21-standards-tracker, state as of June 2026) listed risk management, logging and cybersecurity drafts at enquiry stage and others still in drafting, with none yet cited in the Official Journal; OTG did not independently confirm the position as of October 2026. Citation in the Official Journal is what confers a presumption of conformity, so treat all ISO/IEC standards in this repository as voluntary good practice, not a conformity route, unless and until cited.
+- Security-specific EU work sits in the separate draft cybersecurity standard prEN 18282 (enquiry stage per the June 2026 tracker above), not in ISO/IEC 5338.
